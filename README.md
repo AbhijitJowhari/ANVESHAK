@@ -1,146 +1,148 @@
 
-  
+   
 
-# अन्वेषक: (ANVESHAK)
+   # अन्वेषक: (ANVESHAK)
 
-  
+   
 
-अन्वेषक: (ANVESHAK) is a Python-based tool designed to assist users with scientific papers. It requires several dependencies, including a specific version of the Java Development Kit (JDK) and various Python libraries.
+   अन्वेषक: (ANVESHAK) is a Python-based tool designed to assist users with scientific papers. It requires several dependencies, including a specific version of the Java Development Kit (JDK) and various Python libraries.
 
-  
+   
 
-## Prerequisites
+   ## Prerequisites
 
-  
+   
 
-1.  **Install JDK-17**: ANVESHAK requires JDK-17 to function correctly. Download and install JDK-17 from the [official Oracle website](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html) or use your package manager:
+   1.  **Install JDK-17**: ANVESHAK requires JDK-17 to function correctly. Download and install JDK-17 from the [official Oracle website](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html) or use your package manager:
 
-  
+   
 
--  **Ubuntu/Debian**:
+   -  **Ubuntu/Debian**:
 
-```sh
+   ```sh
 
-sudo apt update
+   sudo apt update
 
-sudo apt install openjdk-17-jdk
+   sudo apt install openjdk-17-jdk
 
-```
+   ```
 
-  
+   
 
--  **macOS** (using Homebrew):
+   -  **macOS** (using Homebrew):
 
-```sh
+   ```sh
 
-brew update
+   brew update
 
-brew install openjdk@17
+   brew install openjdk@17
 
-```
+   ```
 
-  
+   
 
--  **Windows**: Download and install from the [Oracle website](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html).
+   -  **Windows**: Download and install from the [Oracle website](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html).
 
-  
+   
 
-2.  **Install Python 3**: Ensure that Python 3 is installed on your system. You can download it from the [official Python website](https://www.python.org/downloads/).
+   2.  **Install Python 3**: Ensure that Python 3 is installed on your system. You can download it from the [official Python website](https://www.python.org/downloads/).
 
-  
+   
 
-## Installation
+   ## Installation
 
-  
+   
 
-1.  **Clone the Repository**:
+   1.  **Clone the Repository**:
 
-```sh
+   ```sh
 
-git clone https://github.com/AbhijitJowhari/ANVESHAK.git
+   git clone https://github.com/AbhijitJowhari/ANVESHAK.git
 
-cd ANVESHAK
+   cd ANVESHAK
 
-```
+   ```
 
-  
+   2.  **Install Python Dependencies**:
 
-2.  **Install Python Dependencies**:
+   Make sure you have `pip3` installed. Then, install the required Python packages using `requirements.txt`:
 
-Make sure you have `pip3` installed. Then, install the required Python packages using `requirements.txt`:
+   ```sh
 
-```sh
+   pip3 install -r requirements.txt
 
-pip3 install -r requirements.txt
+   ```
 
-```
+   3.  **Create API Keys**:
 
-3.  **Create API Keys**:
+   Make sure you create API keys in the following two websites:
 
-Make sure you create API keys in the following two websites:
+   > [MixedBreadAI](https://mixedbread.ai) (API_1) <br>
 
-> [MixedBreadAI](https://mixedbread.ai) (API_1) <br>
+   > [GroqCloud](https://console.groq.com/keys) (API_2)
 
-> [GroqCloud](https://console.groq.com/keys) (API_2)
+   Then run the following command in the terminal:
 
-Then run the following command in the terminal:
+   ```sh
 
-```sh
+   export MXBAI_API_KEY="<API_1>"
 
-export MXBAI_API_KEY="<API_1>"
+   export GROQ_API_KEY="<API_2>"
 
-export GROQ_API_KEY="<API_2>"
+   ```
+   4.  **Install the grobid framework**:
+   Go to the ```/grobid``` directory and run the following command : (Make sure you have properly followed the [Prerequisites](#prerequisites))
 
-```
+   ```
+   ./gradlew clean install
+   ```
 
-  
+   ## Running ANVESHAK
 
-## Running ANVESHAK
+   **NOTE:** Keep your research papers in the ```/papers``` directory. Otherwise ANVESHAK will raise an error. Also create an empty directory ```papers_xml``` in the root directory of this repo. <br><br>
 
-**NOTE:** Keep your research papers in the ```/papers``` directory. Otherwise ANVESHAK will raise an error. Also create an empty directory ```papers_xml``` in the root directory of this repo. <br><br>
+   To run `ANVESHAK`, you will need an authentication key which can be requested from the [author](mailto:abhijitsj22@iitk.ac.in). Once you have the authentication key, run the following command in the root directory of this repo:
 
-To run `ANVESHAK`, you will need an authentication key which can be requested from the [author](mailto:abhijitsj22@iitk.ac.in). Once you have the authentication key, run the following command in the root directory of this repo:
+   ```sh
 
-```sh
+   ./ANVESHAK
 
-./ANVESHAK
+   ```
 
-```
+   Enter the correct auth key when prompted. This will start the ANVESHAK application, and you can interact with ANVESHAK via your web browser.
 
-Enter the correct auth key when prompted. This will start the ANVESHAK application, and you can interact with ANVESHAK via your web browser.
+   
 
-  
+   ## Notes
 
-## Notes
+   
 
-  
+   - Ensure that all required directories (`./grobid`, `./papers`, `./papers_xml`) and files (`config.json`, `create_d_reps.py`, `grobid_client_KG.py`) are in place and correctly set up before running the script.
 
-- Ensure that all required directories (`./grobid`, `./papers`, `./papers_xml`) and files (`config.json`, `create_d_reps.py`, `grobid_client_KG.py`) are in place and correctly set up before running the script.
+   - The script requires access to the internet to interact with external APIs.
 
-- The script requires access to the internet to interact with external APIs.
+   - Make sure that the required environment variables (e.g., `GROQ_API_KEY`) are set correctly in your environment.
 
-- Make sure that the required environment variables (e.g., `GROQ_API_KEY`) are set correctly in your environment.
+   
 
-  
+   ## Troubleshooting
 
-## Troubleshooting
+   
 
-  
+   - If you encounter issues related to missing Java components, ensure that JDK-17 is correctly installed and that your `JAVA_HOME` environment variable is set appropriately.
 
-- If you encounter issues related to missing Java components, ensure that JDK-17 is correctly installed and that your `JAVA_HOME` environment variable is set appropriately.
+   - For any Python-related errors, ensure all dependencies are installed by re-running `pip3 install -r requirements.txt`.
 
-- For any Python-related errors, ensure all dependencies are installed by re-running `pip3 install -r requirements.txt`.
+   
 
-  
+   ## Acknowledgements
 
-## Acknowledgements
+   
+   I would like to acknowledge the use of the [GROBID](https://github.com/kermitt2/grobid) framework in this project. GROBID (GeneRation Of BIbliographic Data) is an open-source library for extracting, parsing, and re-structuring raw documents into structured data.
+   
 
-  
-I would like to acknowledge the use of the [GROBID](https://github.com/kermitt2/grobid) framework in this project. GROBID (GeneRation Of BIbliographic Data) is an open-source library for extracting, parsing, and re-structuring raw documents into structured data.
-  
+   ## License
 
-## License
+   
 
-  
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+   This project is licensed under the MIT License. See the `LICENSE` file for details.
