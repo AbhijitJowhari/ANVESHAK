@@ -136,7 +136,7 @@ Enter the correct auth key when prompted. This will start the ANVESHAK applicati
 ## Acknowledgements
 
   
-We would like to acknowledge the use of the [GROBID](https://github.com/kermitt2/grobid) framework in this project. GROBID (GeneRation Of BIbliographic Data) is an open-source library for extracting, parsing, and re-structuring raw documents into structured data.
+I would like to acknowledge the use of the [GROBID](https://github.com/kermitt2/grobid) framework in this project. GROBID (GeneRation Of BIbliographic Data) is an open-source library for extracting, parsing, and re-structuring raw documents into structured data.
   
 
 ## License
