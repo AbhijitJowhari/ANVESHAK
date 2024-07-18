@@ -40,7 +40,7 @@
 
    3.  **Create API Keys**:
 
-   ANVESHAK used APIs (Application Programming Interfaces) to leverage Large Language Models for answer your scientific queries. So make sure you create API keys in the following two websites:
+   ANVESHAK used APIs (Application Programming Interfaces) to leverage Large Language Models to answer your scientific queries. So make sure you create API keys in the following two websites:
 
    > [MixedBreadAI](https://mixedbread.ai) (API_1) <br>
 
