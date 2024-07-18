@@ -54,7 +54,7 @@
 
    export GROQ_API_KEY="<API_2>"
 
-
+   ```
    ## Running ANVESHAK
 
    **NOTE:** Keep your research papers in the ```/papers``` directory. Otherwise ANVESHAK will raise an error. Also create an empty directory ```papers_xml``` in the root directory of this repo. <br><br>
