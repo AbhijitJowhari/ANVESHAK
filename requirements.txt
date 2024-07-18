@@ -4,3 +4,4 @@ scikit-learn
 mixedbread-ai
 groq
 streamlit
+grobid-client-python
