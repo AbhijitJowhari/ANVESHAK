@@ -1,0 +1,1975 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main" coords="1,124.24,101.17,363.52,15.48;1,201.29,121.09,208.81,15.48">SEED-Story: Multimodal Long Story Generation with Large Language Model</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2024-07-11">11 Jul 2024</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName coords="1,171.64,181.86,48.71,8.96"><forename type="first">Shuai</forename><surname>Yang</surname></persName>
+						</author>
+						<author>
+							<persName coords="1,247.23,181.86,44.75,8.96"><forename type="first">Yuying</forename><surname>Ge</surname></persName>
+						</author>
+						<author>
+							<persName coords="1,318.87,181.86,33.75,8.96"><forename type="first">Yang</forename><surname>Li</surname></persName>
+						</author>
+						<author>
+							<persName coords="1,379.51,181.86,58.04,8.96"><forename type="first">Yukang</forename><surname>Chen</surname></persName>
+						</author>
+						<author>
+							<persName coords="1,199.40,196.42,41.97,8.96"><forename type="first">Yixiao</forename><surname>Ge</surname></persName>
+						</author>
+						<author>
+							<persName coords="1,274.59,196.42,44.20,8.96"><forename type="first">Ying</forename><surname>Shan</surname></persName>
+						</author>
+						<author>
+							<persName coords="1,352.02,196.42,65.22,8.96"><forename type="first">Yingcong</forename><surname>Chen</surname></persName>
+						</author>
+						<title level="a" type="main" coords="1,124.24,101.17,363.52,15.48;1,201.29,121.09,208.81,15.48">SEED-Story: Multimodal Long Story Generation with Large Language Model</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2024-07-11">11 Jul 2024</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">2C7D79C3F16D6472CE34B325651CDC7C</idno>
+					<idno type="arXiv">arXiv:2407.08683v1[cs.CV]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.1-SNAPSHOT" ident="GROBID" when="2024-07-25T09:53+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>With the remarkable advancements in image generation and open-form text generation, the creation of interleaved image-text content has become an increasingly intriguing field. Multimodal story generation, characterized by producing narrative texts and vivid images in an interleaved manner, has emerged as a valuable and practical task with broad applications. However, this task poses significant challenges, as it necessitates the comprehension of the complex interplay between texts and images, and the ability to generate long sequences of coherent, contextually relevant texts and visuals. In this work, we propose SEED-Story, a novel method that leverages a Multimodal Large Language Model (MLLM) to generate extended multimodal stories. Our model, built upon the powerful comprehension capability of MLLM, predicts text tokens as well as visual tokens, which are subsequently processed with an adapted visual de-tokenizer to produce images with consistent characters and styles. We further propose multimodal attention sink mechanism to enable the generation of stories with up to 25 sequences (only 10 for training) in a highly efficient autoregressive manner. Additionally, we present a large-scale and high-resolution dataset named StoryStream for training our model and quantitatively evaluating the task of multimodal story generation in various aspects. The models, codes and datasets are released in https://github.com/TencentARC/SEED-Story.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<facsimile>
+		<surface n="1" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="2" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="3" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="4" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="5" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="6" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="7" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="8" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="9" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="10" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="11" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="12" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="13" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="14" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="15" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="16" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="17" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="18" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="19" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="20" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="21" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="22" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="23" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="24" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+	</facsimile>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">Introduction</head><p>Interleaved image-text data is ubiquitous on the internet, characterized by multiple images interspersed with text. In recent years, there has been a surge of interest in generating interleaved image-text content <ref type="bibr" coords="2,139.05,391.62,15.65,8.64" target="#b51">[52,</ref><ref type="bibr" coords="2,157.01,391.62,12.40,8.64" target="#b15">16,</ref><ref type="bibr" coords="2,171.71,391.62,7.42,8.64" target="#b0">1,</ref><ref type="bibr" coords="2,181.44,391.62,12.40,8.64" target="#b10">11,</ref><ref type="bibr" coords="2,196.14,391.62,11.74,8.64" target="#b48">49]</ref>, driven by the remarkable advancements in image generation <ref type="bibr" coords="2,450.45,391.62,15.65,8.64" target="#b42">[43,</ref><ref type="bibr" coords="2,468.41,391.62,12.40,8.64" target="#b25">26,</ref><ref type="bibr" coords="2,483.12,391.62,7.42,8.64" target="#b8">9,</ref><ref type="bibr" coords="2,492.84,391.62,12.40,8.64" target="#b35">36,</ref><ref type="bibr" coords="2,108.00,402.53,13.21,8.64" target="#b53">54]</ref> and open-form text generation <ref type="bibr" coords="2,243.36,402.53,15.65,8.64" target="#b52">[53,</ref><ref type="bibr" coords="2,261.24,402.53,12.40,8.64" target="#b47">48,</ref><ref type="bibr" coords="2,275.87,402.53,7.83,8.64" target="#b58">59</ref>]. This has given rise to Multimodal Story Generation, an intriguing and valuable task that involves the generation of narrative texts and vivid images in an interleaved manner. This task goes beyond traditional text-based storytelling by fusing text and visuals to enrich narratives, creating a more immersive storytelling experience where visuals and text dynamically interact and complement each other.</p><p>However, multimodal story generation poses significant challenges due to the complexity of the inputs and the high demands on the quality of the outputs. Firstly, this task necessitates a thorough comprehension of interleaved data, where text is not only abstract and narrative in nature, but also deeply intertwined with complex images. The model must be adept at deciphering the intricate relationships between images and texts to maintain a coherent narrative flow. Secondly, this task requires the generation of not only a plausible text plot, but also visually captivating images that are consistent in characters and styles. The model should be capable of achieving coherence in the generation of both text and visuals, ensuring an engaging storytelling output.</p><p>Recently, Multimodal Large Language Models (MLLMs) <ref type="bibr" coords="2,341.41,555.31,15.81,8.64" target="#b22">[23,</ref><ref type="bibr" coords="2,359.71,555.31,12.47,8.64" target="#b59">60,</ref><ref type="bibr" coords="2,374.67,555.31,12.47,8.64" target="#b38">39,</ref><ref type="bibr" coords="2,389.64,555.31,7.49,8.64" target="#b4">5,</ref><ref type="bibr" coords="2,399.62,555.31,12.47,8.64" target="#b27">28,</ref><ref type="bibr" coords="2,414.58,555.31,12.47,8.64" target="#b57">58,</ref><ref type="bibr" coords="2,429.54,555.31,12.47,8.64" target="#b25">26,</ref><ref type="bibr" coords="2,444.51,555.31,13.30,8.64" target="#b21">22]</ref> have showcased powerful comprehension abilities in understanding multimodal data, which makes them ideally suited for interleaved image-text content in multimodal stories. Consequently, we introduce SEED-Story, a novel approach that builds upon the MLLM to harness its comprehension strength, while further equipping it with the capability to generate coherent images align with the narrative texts.</p><p>Specifically, following previous work <ref type="bibr" coords="2,266.50,615.33,15.89,8.64" target="#b44">[45,</ref><ref type="bibr" coords="2,285.79,615.33,11.92,8.64" target="#b15">16]</ref>, we utilize a pre-trained image tokenizer and detokenizer, which can decode realistic images with SD-XL <ref type="bibr" coords="2,337.05,626.24,16.50,8.64" target="#b40">[41]</ref> by taking the features of a pre-trained ViT as input. During training, given the interleaved visual and textual data, we adopt the next-word prediction and image feature regression training objectives to regularize multimodal generation. A fixed number of learnable queries are fed into the MLLM, where the output hidden states are trained to reconstruct the ViT features of the target images. To further enhance the consistency of characters and styles in generated images, we propose de-tokenizer adaptation, where the regressed image features from the MLLM are fed into the de-tokenizer for tuning SD-XL. This adaptation allows for better maintenance of coherence in low-level image details from the de-tokenizer, ensuring a more visually consistent storytelling output.</p><p>Furthermore, to enable the efficient generation of coherent long stories, we propose a multimodal attention sink mechanism based on window attention <ref type="bibr" coords="3,315.54,86.39,10.44,8.64" target="#b6">[7]</ref>, which maintains a fixed-size sliding window on the Key-Value (KV) states of the most recent tokens, as well as the beginning of text tokens, images tokens, and the end of image tokens. We empirically find that retaining these tokens will largely mitigate the model's failure with window attention when the token length surpasses the cache size, allowing our model to generalize to longer sequences than the training sequence length in an efficient manner. Our model with the proposed multimodal attention sink mechanism can generate long stories with up to 30 multimodal sequences, featuring rich text plots and diverse visual scenarios.</p><p>Additionally, we introduce a dataset named StoryStream for training and evaluating multimodal story generation. We design an automatic pipeline that leverages MLLMs to obtain a large-scale and high-resolution dataset featuring a sequence of narrative-rich texts and intriguing images, derived from animated videos. StoryStream is four times larger in terms of data volume compared to the existing largest story dataset <ref type="bibr" coords="3,226.43,211.87,15.42,8.64" target="#b26">[27]</ref>, and it boasts higher image resolution, longer sequence lengths, and more detailed story narratives. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2">Related Work</head><p>Story Visualization vs. Multimodal Story Generation The domain of story visualization, initially pioneered by StoryGAN <ref type="bibr" coords="3,207.82,380.48,15.26,8.64" target="#b24">[25]</ref>, has witnessed substantial advancements across various models focusing on improving image quality, narrative flow, and character consistency. StoryGAN introduced a framework based on sequential conditional GANs with dual discriminators that enhanced both narrative coherence and visual fidelity. Subsequent developments such as DuCoStoryGAN <ref type="bibr" coords="3,487.27,413.21,16.73,8.64" target="#b31">[32]</ref> and VLCStoryGAN <ref type="bibr" coords="3,193.99,424.12,16.73,8.64" target="#b30">[31]</ref> have integrated video captioning to better align text descriptions with corresponding visuals. The field has further expanded with the adoption of diffusion models aimed at refining the quality of generated story images. StoryDALL-E <ref type="bibr" coords="3,374.80,445.93,16.73,8.64" target="#b32">[33]</ref> utilizes pre-trained models augmented with cross-attention layers to support story progression from an initial image. Innovations like AR-LDM <ref type="bibr" coords="3,167.11,467.75,16.60,8.64" target="#b34">[35]</ref> and Story-LDM <ref type="bibr" coords="3,252.59,467.75,16.60,8.64" target="#b41">[42]</ref> have introduced auto-regressive diffusion models to create coherent sequences of images, while TaleCrafter <ref type="bibr" coords="3,308.13,478.66,16.73,8.64" target="#b16">[17]</ref> has employed LoRA and optimization techniques to ensure consistent characters throughout complex visual narratives. Intelligent Grimm <ref type="bibr" coords="3,487.43,489.57,16.57,8.64" target="#b26">[27]</ref> has proposed open-ended story visualization and has developed the auto-regressive model StoryGen, which includes a vision-language context module to further enhance character consistency. In contrast to all above, our work advances beyond story visualization by focusing on multimodal story generation. This approach continues the story with additional text and creates corresponding images, offering a richer, more engaging narrative experience into the story generation process.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>MLLM for Multimodal Story Generation</head><p>In the rapidly evolving domain of large language models (LLMs) <ref type="bibr" coords="3,176.07,579.72,15.89,8.64" target="#b52">[53,</ref><ref type="bibr" coords="3,195.24,579.72,7.52,8.64" target="#b7">8,</ref><ref type="bibr" coords="3,206.04,579.72,13.35,8.64" target="#b9">10]</ref> and multimodal large language models (MLLMs) <ref type="bibr" coords="3,431.23,579.72,15.89,8.64" target="#b22">[23,</ref><ref type="bibr" coords="3,450.39,579.72,12.50,8.64" target="#b59">60,</ref><ref type="bibr" coords="3,466.17,579.72,12.50,8.64" target="#b29">30,</ref><ref type="bibr" coords="3,481.95,579.72,12.50,8.64" target="#b39">40,</ref><ref type="bibr" coords="3,497.72,579.72,7.52,8.64" target="#b5">6,</ref><ref type="bibr" coords="3,108.00,590.63,12.50,8.64" target="#b28">29,</ref><ref type="bibr" coords="3,123.39,590.63,12.50,8.64" target="#b57">58,</ref><ref type="bibr" coords="3,138.77,590.63,12.50,8.64" target="#b25">26,</ref><ref type="bibr" coords="3,154.16,590.63,12.50,8.64" target="#b45">46,</ref><ref type="bibr" coords="3,169.54,590.63,12.50,8.64" target="#b56">57,</ref><ref type="bibr" coords="3,184.93,590.63,12.50,8.64" target="#b14">15,</ref><ref type="bibr" coords="3,200.31,590.63,12.50,8.64" target="#b13">14,</ref><ref type="bibr" coords="3,215.70,590.63,12.50,8.64" target="#b54">55,</ref><ref type="bibr" coords="3,231.08,590.63,12.50,8.64" target="#b10">11,</ref><ref type="bibr" coords="3,246.47,590.63,12.50,8.64" target="#b60">61,</ref><ref type="bibr" coords="3,261.85,590.63,12.50,8.64" target="#b46">47,</ref><ref type="bibr" coords="3,277.24,590.63,11.91,8.64" target="#b23">24]</ref>, recent research, such as StoryGPTV <ref type="bibr" coords="3,447.47,590.63,15.42,8.64" target="#b43">[44]</ref>, explores using MLLMs for story generation by converting visual features into token embeddings. StoryGPTV requires character and object masks for training its LDM. In contrast, our model, with the visual tokenization and de-tokenization, have a stronger visual comprehension ability, making it trains directly from interleaved text and image data without the need for masks. MM-interleaved <ref type="bibr" coords="3,459.85,634.27,16.47,8.64" target="#b51">[52]</ref> design an MMFS module to process interleaved text-image data and achieve multimodal story generation through image features and LLM output. While our approach directly generates images through LLM output tokens. We take MM-interleaved as an important baseline and compare with it.</p><p>Visual Story Dataset In the landscape of datasets for visual storytelling, various collections have been developed. The VIST <ref type="bibr" coords="3,226.33,702.61,16.73,8.64" target="#b19">[20]</ref> dataset is noteworthy for its use of realistic images, though it struggles with maintaining character consistency across stories. The Pororo <ref type="bibr" coords="3,406.42,713.51,16.48,8.64" target="#b24">[25]</ref> and Flintstones <ref type="bibr" coords="3,487.52,713.51,16.48,8.64" target="#b17">[18]</ref>  datasets, while popular for animation-based story datasets, are hindered by their low resolution and the simplicity of their accompanying texts. Another significant dataset is StorySalon <ref type="bibr" coords="4,456.99,213.39,15.42,8.64" target="#b26">[27]</ref>, which offers high-resolution images and is large in scale, but it lacks global consistency across a series of images. To address these gaps, we introduce StoryStream, a globally consistent, large-scale, high-resolution animated style dataset with engaging, narrative-rich text for complex storytelling, overcoming the limitations of existing datasets. The analysis is shown in Table <ref type="table" coords="4,423.95,257.03,3.74,8.64" target="#tab_1">1</ref>.</p><p>3 Method</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1">Story Generation with Multimodal Large Language Model</head><p>Visual Tokenization and De-tokenization The overview of our method is presented in Figure <ref type="figure" coords="4,498.21,332.39,3.77,8.64" target="#fig_1">2</ref>.</p><p>To effectively extend visual stories, our model must comprehend and generate both images and text. Drawing inspiration from recent advancements in generative MLLMs that unify image comprehension and generation <ref type="bibr" coords="4,170.89,365.12,15.41,8.64" target="#b40">[41]</ref>, we develop a multimodal story generation model. Our model employs a pretrained Vision Transformer <ref type="bibr" coords="4,223.10,376.03,16.73,8.64" target="#b11">[12]</ref> (ViT) as the visual tokenizer and a pre-trained diffusion model as the visual de-tokenizer to decode images by using ViT's features as inputs. Specifically, visual embeddings from the ViT tokenizer are fed into a learnable module, which then serves as inputs for the U-Net of the pre-trained SD-XL <ref type="bibr" coords="4,252.46,408.76,15.21,8.64" target="#b40">[41]</ref>. This process replaces the original text features with visual embeddings. During this stage, the parameters are optimized using open-world text-image pair data as well as story data to enhance the model's encoding-decoding capability. After this training phase, we expect the visual tokenizer and de-tokenizer modules to preserve as much image information as possible in the feature space.</p><p>Story Instruction Tuning In our instruction tuning process for story generation, we sample a random-length subset of a story data point for each iteration. The model is tasked with predicting the next image and the next sentence of the story text. Within MLLM, all images are converted into image features using a pre-trained ViT tokenizer. For the target text tokens, we perform next-token prediction and use Cross Entropy loss to train for this discrete target. For the target image features, the model uses a series of learnable queries as inputs and continuously outputs a series of latent embeddings. We then compute the cosine similarity loss between the MLLM's output and the target image features. During this stage, we fine-tune the SEED-Story model using a LoRA <ref type="bibr" coords="4,449.78,546.61,16.60,8.64" target="#b18">[19]</ref> module.</p><p>De-tokenizer Adaptation After instruction tuning, the SEED-Story MLLM effectively produces story images with correct semantics but lacks style consistency and details. We attribute this issue to the misalignment between the latent space of the MLLM output and the image features. To address this, we perform de-tokenizer adaptation for style and texture alignment. In this stage, only the SD-XL image de-tokenizer is trained. Conditioned on the MLLM output embeddings, SD-XL is expected to generate images that are pixel-level aligned with the ground truth. The separate training of the de-tokenizer offers two key advantages. First, it avoids optimization conflicts between the LLM and the de-tokenizer. Second, it conserves memory, making the process executable on GPUs with limited memory.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2">Long Story Generation with Multimodal Attention Sink</head><p>Generating long visual stories has substantial potential in various applications, including education and entertainment. However, creating these stories with MLLMs presents significant challenges. Datasets for extended, interleaved stories are not only rare but also impede the training process due  to their complexity. To address this, we have to employ a train-short-test-long approach, training models on shorter narratives and extending to longer generations during inference. Moreover, during inference, generating significantly longer stories than the training data often leads to model degradation, producing lower-quality images, as illustrated in the first row of Figure <ref type="figure" coords="5,493.04,593.46,8.47,8.64" target="#fig_0">10</ref>. This process also requires extensive token usage to ensure continuity and coherence, which in turn increases memory and computational demands.</p><p>A simplistic solution for this is to use a sliding window technique, depicted in Figure <ref type="figure" coords="5,461.27,631.67,5.08,8.64" target="#fig_2">3</ref> right (b). However, this method disrupts the token relationships in the Key-Value (KV) cache, resulting in subpar generative outcomes, as demonstrated by StreamingLLM <ref type="bibr" coords="5,343.21,653.49,15.42,8.64" target="#b55">[56]</ref>. To overcome this, StreamingLLM introduces an attention sink mechanism that preserves the initial tokens, thus allowing for efficient processing of lengthy generations without quality compromise. While effective in language models, its efficacy diminishes in multimodal contexts, as shown in Figure <ref type="figure" coords="5,373.70,686.22,4.98,8.64" target="#fig_2">3</ref> right (c).</p><p>To enhance long multimodal generation, we revisit the attention maps of MLLMs. After conducting numerous experiments across various models and cases, we analyze the attention maps across different layers and heads. Our analysis reveals that most queries predominantly focus on four types of tokens:</p><p>(1) starting tokens, (2) punctuation tokens, (3) beginning-of-image (BoI) tokens, and ( <ref type="formula" coords="6,441.60,386.55,3.79,8.64">4</ref>) end-of-image (EoI) tokens. Unlike language-only models, MLLMs place considerable attention on specific image tokens, particularly those near the BoI and EoI, as illustrated in Figure <ref type="figure" coords="6,390.69,408.37,4.98,8.64" target="#fig_2">3</ref> left.</p><p>Building on these insights, we propose a new mechanism for extended generation in MLLMs, termed the multimodal attention sink. During generation, we consistently retain the starting tokens and the image tokens adjacent to the BoI and EoI. Although punctuation tokens receive high attention values, their latent value norms are minimal, contributing insignificantly to the final output, so we do not keep them, as noted by <ref type="bibr" coords="6,203.07,468.40,15.37,8.64" target="#b12">[13]</ref>. Our proposed mechanism enables our model to generate high-quality images while maintaining a low computational footprint.</p><p>4 StoryStream Dataset</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1">Dataset Construction</head><p>An ideal source for creating a multimodal story generation dataset is cartoon series, which inherently contain rich plots and consistent character portrayals. We selected three cartoon series to construct our dataset and we present the Curious George in the main body of our paper. The process begins with collecting various series, from which we extract keyframes and their associated subtitles <ref type="bibr" coords="6,486.53,588.04,15.37,8.64" target="#b20">[21]</ref>.</p><p>Each keyframe is then processed by GPT-4V <ref type="bibr" coords="6,296.95,598.94,16.73,8.64" target="#b33">[34]</ref> or Qwen-VL <ref type="bibr" coords="6,372.74,598.94,11.75,8.64" target="#b5">[6]</ref> to generate a detailed image description. These elements-keyframe, subtitle, and description-are compiled into a single group. We aggregate 30 such groups and input them into GPT-4, supplemented with background information about the cartoon series. Following our instructions, GPT-4 generates high-quality narrative texts suitable for training story generation models.</p><p>During dataset construction, we discovered that employing the above chain of thought approach not only produces more accurate narrative text but also speeds up the construction process. Unlike directly feeding all images directly to GPT-4, which is limited to 10 images due to API constrains, our approach produces longer stories. We also significantly improve the model's understanding of each image by incorporating detailed descriptions. This enhancement in image comprehension enriches the narrative details, providing a richer story generation reference.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Flintstone Pororo</head><p>George, the small monkey, was on an icy adventure with his friend, the man in the yellow snowsuit.</p><p>The snowflakes continued to fall around them, creating a beautiful, albeit cold, scene. Despite the cold, the man comforted George, who was showing signs of concern.</p><p>They stood together against the snowy backdrop, trying to figure out their next move. George and his friend found themselves standing on an icy platform surrounded by water, with large icebergs in the background.</p><p>George found comfort in the arms of his friend. They stood together, ready to face whatever came next. The man took a moment to rest, seated against the icy backdrop, still wearing his hat and carrying a backpack, ready for their next move.</p><p>Suddenly, the man had to run through a snowy canyon. It was a treacherous path with ice floes floating on the water and snowflakes falling from the sky.</p><p>Inside an icy cave, the man held George close. They peered curiously into the snowy landscape, cautious of what might be out there.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="854">480</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>StoryStream</head><p>Fred is holding his things in the room.</p><p>Wilma is walking across the room.</p><p>Fred is standing in a room talking while holding a pile of clothes and a hat over one arm.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Wilma is speaking in the room</head><p>Wilma is standing in a room, talking. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2">Key Features</head><p>Large-scale. Our StoryStream dataset comprises three subsets totaling 257,850 released images. This represents a significant improvement over existing datasets in terms of scale, specific numbers are presented in column 2 of Table <ref type="table" coords="7,254.76,629.28,3.81,8.64" target="#tab_1">1</ref>. To the best of my knowledge, it is the largest visual story generation dataset featuring consistent main characters. High Resolution. Unlike existing story generation datasets, such as Flintstones and Pororo, which offer images at a resolution of 128x128, our story stream dataset provides high-resolution images of 480x768. Narrative Text. Our dataset diverges from existing ones that utilize simple and descriptive language. We offer abstract, narrative, detailed, and story-toned texts that are more akin to real-world applications, such as visualizing narratives from a storybook, examples are shown in Figure <ref type="figure" coords="7,472.46,713.51,3.70,8.64">4</ref>. Story text of existing datasets obey the form of "name" + "action", like "Poby is playing the violin.". Contrarily, our story text involves more intrinsic elements. This effectively enhances the engagement of audiences. An analysis of the average text length per sentence is shown in column 5 of Table <ref type="table" coords="8,490.81,97.30,3.74,8.64" target="#tab_1">1</ref>.</p><p>Long Sequence. Moreover, our dataset enhances long story comprehension by offering up to 30 images per story point. Within these 30 images, our corresponding texts present a cohesive narrative, effectively conveying the progression and intricacies of extended stories.   Previous story generation approaches primarily utilize diffusion models, focusing on visualizing story images. These models take the previous image and text as input, and then generate only the next image based on the current text prompt. For a fair comparison, we adapt our model to a visualization-only format. For StoryGen <ref type="bibr" coords="8,284.80,483.45,15.12,8.64" target="#b26">[27]</ref>, we also train it to produce images with previous images and texts. For LDM <ref type="bibr" coords="8,379.38,494.35,15.19,8.64" target="#b42">[43]</ref>, we only give it text-image pairs. The visual results are shown in Figure <ref type="figure" coords="8,287.15,505.26,3.73,8.64" target="#fig_4">5</ref>. SEED-Story model shows better style and character consistency and higher quality compared to baselines. We also conduct a quantitative evaluation in Table <ref type="table" coords="8,132.07,527.08,4.98,8.64" target="#tab_3">2</ref> to demonstrate our effectiveness. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.2">Multimodal Story Generation</head><p>For comparative analysis, there are relatively few established methods for generating multimodal stories. To establish a baseline for comparison, we fine-tune the recently developed MM-interleaved model on our dataset. We detail the comparative results in Figure <ref type="figure" coords="9,371.09,119.26,3.75,8.64" target="#fig_6">6</ref>. The FID is employed to assess the visual quality of the generated images. Additionally, we ask GPT-4V to compare and choose a preferred option between each of the generation results of MM-interleaved and SEED-Story across several dimensions: Style Consistency, which evaluates the stylistic uniformity across different images; Story Engagement, which measures the ability of narratives to captivate and maintain audience interest; and Image-Text Coherence, which assesses the alignment and relevance between images and their accompanying texts. The appendix presents our visual results and details about prompt engineering methods.</p><p>For qualitative presentation, we demonstrate our SEED-story effectively helps users control the story plot. Figure <ref type="figure" coords="9,180.07,222.92,4.99,8.64" target="#fig_9">7</ref> shows that using the same starting image but different initial texts, the narrative branches into two distinct storylines.</p><p>We provide more cases in Figure <ref type="figure" coords="9,247.88,250.22,5.08,8.64" target="#fig_10">8</ref> and Figure <ref type="figure" coords="9,303.86,250.22,5.08,8.64">9</ref> to prove our multimodal long story generation capabilities. SEED-story can generate long sequences with engaging plots and vivid images. George was so excited that he jumped high in the air, his arms stretched out in front of him.</p><p>As George landed, he noticed a bee hovering nearby and reached out to touch it, curious about the small creature with stripes George was right beside a bee, both of them in a grassy field with a building in the background where a small flower grew between the bricks George was having a great time, smiling and extending his hand towards a bee that was flying near him, with the building and greenery behind him under a clear sky He signaled to George, who was standing next to a house, that they had to go, with a lush green landscape and a wooden fence suggesting a peaceful, rural setting George, wearing his yellow hat, looked puzzled but ready for adventure, standing against a simple grassy background with a stone wall partially visible They hopped into a yellow car, George in the back seat, looking curious, with a building on the right and greenery around as they drove off into the distance They drove through a picturesque rural landscape, with a large red barn, a small cottle, lush greenery, and a winding dirt road, all under a clear sky Meanwhile, the man in the yellow hat was in a bit of a pickle, looking worried as he stood in front of a stone wall and a wooden structure, with a small window above him USER: Please continue the story: "After a day brimming with fun, they went back to their cheerful countryside residence, preparing for new adventures." With a magnifying glass and a camera, George and his friend began their adventure, excited to explore the world around them.</p><p>George was thrilled to capture the beauty of the hills, the trees, and the wooden fence under the calm sky.</p><p>He took a picture of a quaint house surrounded by lush greenery, noticing small details through his magnifying lens.</p><p>Next, George captured his friend holding a book, with a vibrant landscape behind them, making the moment last forever.</p><p>He continued capturing the vibrant farm with his camera, capting the beauty of the farm, the farmhouse, and the lush greenery.</p><p>George then took a picture of a child holding a chicken, with a chicken coop in the background, capturing a fun moment on earth.</p><p>Next, George took a picture of four chickens in front of a small house, noticing a hand holding a blue object in the foreground.</p><p>With a smile, George held his camera, ready to capture another moment, excited to capture more of the world's beauty.</p><p>George then took a picture of his friend smiling, standing beside a bushy tree under the clear sky.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>8</head><p>USER: Please continue the story: "On sunny day, George and his friend, the man in the yellow hat, decided to explore their farm." George stood next to a duck in front of a barn, surrounded by a grassy field and trees. The sky was blue with a few clouds.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="21">22 23 24</head><p>A duck stood in the foreground, with a barn and trees in the background. The sky was blue with a small cloud.</p><p>George, wearing a puzzled expression, stood in front of a rural landscape with a large barn and a small house.</p><p>The background showed green fields, trees, and a blue sky with a single cloud.</p><p>George, with a curious expression, stood in front of a house with a barn in the background. The sky was blue with a small cloud.</p><p>A man in overalls and a hat was holding a bucket, standing next to a pile of dirt. George and a duck were there also, with a small house in the background.</p><p>George stood in a farm setting, looking at a small puddle. Behind him, a barn and a house were visible, along with greenery and a fence A man in overalls was kneeling beside a pile of dirt, holding a shovel. George and a duck were there also, looking at the house in the background.</p><p>A duck stood in a grassy area, with a barn and trees in the background.</p><p>The sky was blue with a small cloud.</p><p>A figure in overalls was holding a stick, standing next to a small house in a grassy area. There was a large bush on the side.</p><p>A man in overalls was digging a hole with a shovel in a grassy area. George and a duck were there also, looking on with curiosity. A small house sat in the background.</p><p>George stood in a grassy area, looking at a small puddle of water. Behind him, a barn and a house were visible, along with a wooden fence and trees.</p><p>A man in a hat and overalls was holding a stick, standing next to George. Both were looking at a muddy puddle in a grassy area, near a house and a tree.</p><p>George stood in a farm setting, looking towards a barn and a house. A puddle of water was on the ground in front of him, with greenery and a fence behind.</p><p>A character dressed in a suit and hat was standing in front of a rural landscape with a barn and a tree.</p><p>A man in a hat and shirt stood outside, looking surprised or confused. A tree and a building were visible in the background.</p><p>A man in a shirt and hat stood outside, looking surprised. George, the monkey, held onto the man's leg, looking up at him. A barn, a house, and a tree were in the background.</p><p>George, the cartoon monkey, looked surprised or worried. The background showed a grassy field with a small puddle of water and a tree trunk.</p><p>A man in a hat and overalls was kneeling in the grass, reaching out to George. A house and a tree were in the background.</p><p>George, the cartoon monkey, stood in a grassy area, looking curious. Behind him, a small puddle of water and a tree were visible. George appeared surprised or intrigued, with wide eyes and raised eyebrows.</p><p>A man in a hat and shirt looked surprised, standing in front of a barn and a tree. His mouth was open, and one hand was raised to his head.</p><p>George, the monkey, stood on a grassy field, looking curiously at a muddy puddle. Near the puddle, a pair of boots and a hat were visible. Behind, a fence and lush trees suggested a rural setting.</p><p>A man in a hat and shirt stood in front of a barn, looking surprised with one hand on the chest. A tree and grassy hill were visible in the background.</p><p>A man in a hat and shirt looked surprised, standing in front of a barn and a tree. Soon, George and the man in the yellow hat were back in their car, driving through a green tunnel. The car's interior was a comforting sight.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="21">22 23 24</head><p>They drove along a curved road surrounded by grass and trees. The sky was clear, and George's heart was full of excitement.</p><p>Suddenly, George noticed a cat lying on the road. He crouched near the car's front wheel, watching the cat.</p><p>George stood near the parked car, looking up at the man in the yellow hat. They were surrounded by trees and a blue sky.</p><p>George, with his big eyes and mischievous smile, stood ready for the next adventure.</p><p>They reached a colorful park with a slide, a ladder, and a playground.</p><p>The green bushes and trees added to the playful atmosphere.</p><p>George and the man in the yellow hat stood beside the parked car in the green landscape. They were ready for their next adventure.</p><p>Their journey led them to a vibrant landscape with a large slide in the foreground. A slide extended into a pool, inviting them to play.</p><p>They reached a vibrant roller coaster track set against a blue sky with fluffy white clouds. The ride featured red and yellow accents, adding to its charm.</p><p>The amusement park was colorful and bustling with visitors. A large Ferris wheel stood in the foreground, with buildings and greenery in the distance.</p><p>The man in the yellow hat and George stood in front of a roller coaster track, looking concerned. They were unsure of what to do next.</p><p>George, with his big, curious eyes, looked up at the man in the yellow hat.</p><p>He was eager to have some fun.</p><p>Their journey took them to a colorful amusement park with a towering roller coaster. The park was surrounded by greenery and a cityscape.</p><p>The next day, George and the man in the yellow hat found themselves on a roller coaster. George appeared excited while the man looked concerned. Their adventure had just begun.</p><p>On their way home, they took a boat ride. The man held onto the steering wheel, while George and a child peeked out from the boat's window, smiling. They were having a great time.</p><p>Finally, they returned to their colorful house. The walls and the roof under the clear sky made the house look inviting and peaceful.</p><p>It was the perfect end to a perfect day.</p><p>The man in the yellow hat and George waved goodbye from the doorway of their house. They were ready for another day of adventures.</p><p>At the end of the day, they returned to their vibrant yellow house. The walls and roof glowed in the twilight, and the trees and hills in the background added to the peacefulness of their home.</p><p>Finally, George and the man in the yellow hat sat on a bench inside a colorful cockpit with a steering wheel and control levers. They were ready to go home, but their adventurous spirit was ready for the next day.</p><p>The man in the yellow hat and George waved goodbye from the doorway of their house. They were ready for another day of adventures in the park, near the river.</p><p>Their last ride before heading home was a boat. The man held the steering wheel, while George and a child peeked out from a window. They were all smiling, looking forward to their next adventure.</p><p>Finally, George and the man in the yellow hat sat on a bench inside a colorful cage with a bright wheel. The man looked concerned while George appeared curious. They were ready to go home, but their adventurous spirit was ready for the next day.</p><p>Their last ride before heading home was a boat. The man held the steering wheel, while George and a child peeked out from the window. They were all smiling, looking forward to their next adventure.</p><p>The man in the yellow hat smiled as he looked at George, who was standing beside the car. The grassy hills and trees in the background added to the beauty of the scene.  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3">Long Story Generation</head><p>To verify our effectiveness in long story generation, we conduct an experiment visualizing a long story using the SEED-Story model, but with varying attention mechanisms. We chunk our data into stories of length of 10 considering the training efficiency. We set the window size as the same as the training length. Qualitative results depict in Figure <ref type="figure" coords="12,317.52,522.43,10.16,8.64" target="#fig_0">10</ref> demonstrate that window attention quickly collapses when the inference length exceeds the training length. Both dense attention and attention sink approaches fare better, yet still fail to produce meaningful images as the inference sequence lengthens. In contrast, the multimodal attention sink consistently produces high-quality images.</p><p>In terms of efficiency, the multimodal attention sink exhibits significant improvement over dense attention, with only a modest increase in time and memory costs compared to window attention and vanilla attention sink. These additional costs stem from retaining extra image tokens in the KV cache.</p><p>Quantitative results presented in Table <ref type="table" coords="12,263.14,598.80,4.98,8.64" target="#tab_4">3</ref> substantiate the above conclusion.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6">Conclusion</head><p>This work introduces SEED-Story, a pioneering approach that leverages a Multimodal Large Language Model to generate multimodal long stories with rich narrative text and contextually relevant images. We propose a multimodal attention sink mechanism to enable our model to generalize to generating long sequences in an efficient manner. We further present a high-quality dataset named StoryStream for training and benchmarking the task of multimodal story generation effectively. Our usage fully comply with the terms of use. 1) Personal Uses Permitted: My project is noncommercial and educational, which aligns with personal uses as outlined by PBS. we are not using the information for commercial purposes or exploiting it in a manner inconsistent with PBS rules. The use is strictly for educational and research purposes within an academic setting. 2) User's Obligation to Abide By Applicable Law: We will ensure all research activities comply with local laws, particularly those relating to copyright and intellectual property rights. Our use will not involve unauthorized reproduction, distribution, or exhibition that violates Intellectual Property Laws. All data are for research only. 3) Content of Information: We will responsibly use the "Curious George" materials, ensuring that all content used in our research is accurately cited and acknowledged. Any PBS content incorporated into your project will be clearly attributed to PBS.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C.2 Rabbids Invasion</head><p>"Rabbids Invasion" is a French-American computer-animated TV series that breathes life into the zany antics of Ubisoft's popular Rabbids video game characters. Created by Jean-Louis Momus and featuring the voice of Damien Laquet, the show is a dynamic blend of humor and adventure tailored for a family audience. Since its debut on August 3, 2013, on France 3, the series has enjoyed multiple seasons and a global reach. The Rabbids are mischievous rabbit-like creatures whose escapades lead them into all sorts of unpredictable and hilarious situations, making "Rabbids Invasion" a delight for both kids and adults alike. Thanks to their release, we derive some subsets from the cartoon series Rabbids Invasion <ref type="bibr" coords="19,179.30,86.39,10.79,8.64" target="#b3">[4,</ref><ref type="bibr" coords="19,192.58,86.39,7.19,8.64" target="#b2">3]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C.3 The Land Before Time</head><p>The Land Before Time, an iconic animated film series created by Judy Freudberg and Tony Geiss and distributed by Universal Pictures, debuted in 1988 with significant contributions from Don Bluth, George Lucas, and Steven Spielberg. This franchise, consisting of an initial film followed by 13 sequels, a TV series, video games, and extensive merchandising, explores the adventures of five young dinosaurs who learn key life lessons about friendship and teamwork through their prehistoric trials. Despite the absence of the original creators in the sequels, the series has continued to captivate audiences, emphasizing themes of community and perseverance across its extensive narrative arc. Thanks to their release, we derive some subsets from their websites <ref type="bibr" coords="19,378.44,224.73,15.77,8.64" target="#b50">[51,</ref><ref type="bibr" coords="19,396.71,224.73,11.83,8.64" target="#b49">50]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C.4 Appreciation</head><p>Leveraging the data derived from "Curious George," "Rabbids Invasion," and "The Land Before Time," we have significantly advanced the capabilities of our story generation models. This progress has direct and impactful implications for children's education by enhancing their imaginative faculties and fostering a keen interest in learning. By integrating elements from these animated series into our models, we not only engage young minds but also deepen their affection for animated storytelling. Consequently, this not only meets but also amplifies educational objectives, such as improving literacy and cognitive skills through enjoyable and interactive content. The successful application of data from these beloved animations in our research exemplifies how academic pursuits can harmoniously blend with educational entertainment, ultimately delivering multifaceted benefits that extend well beyond conventional learning environments.</p><p>Lastly, we extend our profound appreciation to the creators and maintainers of "Curious George," "Rabbids Invasion," and "The Land Before Time," each a rich and vibrant resource that has significantly contributed to the scope and success of our research. The engaging narratives and characters from these series, especially the ever-curious George, the mischievous Rabbids, and the adventurous dinosaurs from The Land Before Time, have provided invaluable data that enhanced our narrative generation models. This project benefited immensely from the educational and entertaining content crafted with meticulous attention to detail, fostering imagination and learning in young audiences. We acknowledge the pivotal role that these animated series have played in advancing academic research aimed at educational technology. The commitment of the teams behind these beloved series to fostering curiosity and learning is both inspiring and exemplary. We are immensely grateful for the opportunity to incorporate such cherished resources into our scholarly work.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>D Story Visualization Comparison</head><p>In this section, we present additional visualization comparison of our SEED-Story and other story visualization methods. SEED-Story shows better image consistency and higher qualit, as shown in Figure <ref type="figure" coords="19,136.50,603.75,8.30,8.64" target="#fig_13">12</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>E Multimodal Story Generation Results</head><p>In this section, we present our multimodal story generation results of our SEED-Story. It keeps produce story image and text with high quality. Please see Figure <ref type="figure" coords="19,370.67,686.22,8.30,8.64" target="#fig_16">13</ref>.</p><p>We also showcase the visualization result of our model on Rabbids Invasion and The Land Before Time. Please see Figure <ref type="figure" coords="19,205.61,713.51,9.96,8.64" target="#fig_0">14</ref> and<ref type="figure" coords="19,234.94,713.51,8.30,8.64" target="#fig_4">15</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>F Details about GPT-4V Evaluation F.1 Comparative Evaluation</head><p>To evaluate the effectiveness of MM-interleaved and SEED-Story in multimodal story generation, we initiate an experiment where each model produces a story of five segments, based on a common starting image and text. The segment limit is set to five to accommodate the constraints of GPT-4V, which can handle a maximum of ten images per input session. In total, we generate 180 stories for assessment. For evaluation, we employ GPT-4 or GPT-4V to determine which model produces the better story in each case, based on the framework established in L-Eval <ref type="bibr" coords="20,388.43,173.46,10.44,8.64" target="#b1">[2]</ref>. We calculate the win rate for each model to determine its performance relative to its counterpart. The prompt we used is shown below.</p><p>"Please act as an impartial judge and evaluate the quality of the generation story contents provided by two AI assistants. Your job is to evaluate which assistant's generation is better. Your evaluation should consider {the style consistency of the story images / the engagement of the story / the coherence of the generated text and images}. Avoid any position biases and ensure that the order in which the responses were presented does not influence your decision. Do not allow the length of the responses to influence your evaluation. Do not favor certain names of the assistants.Be as objective as possible. After providing your explanation, output your final verdict by strictly following this format: "</p><formula xml:id="formula_0" coords="20,142.54,304.15,326.84,19.55">[[A]]" if assistant A is better, "[[B]</formula><p>]" if assistant B is better, and "[[C]]" for a tie."</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>F.2 Score Evaluation</head><p>We also provide a prompt for directly estimating the performance of the generated results without comparing to others. The prompt we used is shown below. We present the direct estimation score is shown in Table <ref type="table" coords="20,170.87,381.80,4.98,8.64" target="#tab_5">4</ref> "Please act as an impartial judge and evaluate the quality of the generation story contents provided by an AI assistant. Your job is to give a score out of 10. Your evaluation should consider {the style consistency of the story images / the engagement of the story / the coherence of the generated text and images}. Do not allow the length of the responses to influence your evaluation. Be as objective as possible. After providing your explanation, output your final score by strictly following this format: "[[score]]", such as "[ <ref type="bibr" coords="20,321.22,468.86,11.10,8.64" target="#b6">[7]</ref>]"." </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>G Story Video</head><p>To showcase the capabilities of our multimodal generation model, we employ a video generation technique to animate the images. We then synchronize these moving images with audio to create a narrative video, which is available in our supplementary materials.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>H Broader Impacts</head><p>This project may potentially produce copyrighted content, particularly when used inappropriately or without adherence to existing intellectual property laws. To mitigate this risk, we will implement a rigorous compliance framework that respects the copyrights of third parties. This involves setting strict usage licenses that align with the legal standards dictated by our data sources. Our aim is to protect intellectual property rights while fostering innovation and ethical use of our technology. We also commit to educating users on the importance of respecting intellectual property rights when using our technology. This will be achieved through detailed user guidelines, training sessions, and readily available support to help users understand and navigate the complexities of copyright laws. By taking these measures, we aim not only to comply with legal standards but also to promote a culture of respect for intellectual property within our user community, thereby contributing positively to the broader digital ecosystem.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I Limitations</head><p>Lack of Realistic Data Experimentation: This limitation points to a potential gap in the validation of the SEED-Story model under practical, real-world conditions. Without experiments using realistic data, it's difficult to ascertain how the model would perform in scenarios that are not perfectly controlled or that deviate from the training conditions. This can be crucial, especially in applications like storytelling where the context and variability of real-world data play significant roles. A possible solution would be to incorporate a broader range of test conditions, including noisy data or data from "in-the-wild" storytelling scenarios, to evaluate the robustness and adaptability of the model.</p><p>Training on a Non-Diverse Dataset: The second limitation is the restriction of the model's training to animation datasets which does not cover a large scale or diverse styles. This can severely limit the model's ability to generalize and produce outputs in styles that are not represented in the training data. This is particularly limiting in creative tasks such as storytelling where the ability to adapt to various artistic and narrative styles is crucial. To mitigate this, expanding the dataset to include a wider array of styles, genres, and visual aesthetics could be beneficial.</p><p>a) The man looked to the side with a surprised expression. The background appeared to be the interior of a rounded structure with a window. b) A small monkey looked up at a person wearing an ou&lt;it. In the background, another person stood next to a large dinosaur skeleton inside what appeared to be a museum. c) A dinosaur skeleton stood inside a museum, with a woman in a coat gesturing towards it. In the background, a small figure waved enthusiasAcally from behind a glass window. d) An woman with short hair and a lab coat stood with hands on hips, smirking. The background showed a wall with two light switches. The man led George into a nearby building, where they found a cozy room with a wooden bed adorned with flowers. A lamp beside the bed cast a warm glow, making George feel right at home. Behind the door, George found a sleeping cat. He gently pulled the door closed, leaving the cat to sleep in peace.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>SEED-Story</head><note type="other">LDM StoryGen</note><p>The next morning, George woke up feeling cheerful. He sat up in bed, looking around the room with a smile, ready for another day of adventures.</p><p>George decided to take the cat for a walk. He held the cat by the collar, looking quite pleased with himself.</p><p>George held the cat in his arms, looking at the curious cat. He was enjoying this new experience of being a cat walkkeeper.</p><p>George decided to take the cat for a walk around the building. He held the cat in his arms, looking at the curious cat. They passed by a man in a coat, who smiled at the sight of them.</p><p>George decided to take the cat for another walk. He held the cat in his arms, looking at the wall, ready for another adventure. In a nearby park, a pigeon had found a new friend, George, the curious monkey. They were standing on a wooden ledge, peering over it. Nearby, a taller bird observed them with interest.</p><p>Meanwhile, a gray pigeon had found a new perch on a building's edge. It overlooked a small balcony, where a man was enjoying a morning cup of coffee, oblivious to the pigeon's presence.</p><p>Elsewhere, a blue-gray pigeon was pecking at seeds on the ground. A person nearby watched intently, their eyes following the bird's every move.</p><p>George, the small brown monkey, was standing next to a large bird on a ledge. The bird looked content, while George seemed curious. The background showed a building with windows, a perfect playground for a curious monkey.</p><p>Meanwhile, a cartoon bird was pecking at some food on the ground. A human hand reached towards the bird, offering a treat.</p><p>George was back on the ledge, this time looking puzzled. The background showed a building, perfect for his little puzzle.</p><p>In a playful mood, George mimicked a pigeon, pecking at a crumb-covered ledge. The pigeon watched him, amused. In the background, a building stood tall, perfect for their little playground.</p><p>George was having a great time, leaning on the bird's perch with a smile. The background showed a building, perfect for a little monkey adventure.</p><p>George sat on a ledge, looking puzzled at a crumby area. The background showed a building, perfect for his little thought bubble.</p><p>Feeling adventurous, George stood on a city sidewalk, waving with a happy expression. The background showed colorful buildings and a clear sky, perfect for his little adventure.</p><p>George stood on a city sidewalk, waving with one hand. The background showed colorful buildings and a clear sky, perfect for his little adventure.</p><p>George stood on a city sidewalk, looking puzzled. The background showed colorful buildings and a street with a parked car, perfect for his little thought bubble.</p><p>Suddenly, George noticed a small object on the floor. He stood on the ledge, looking at it with curiosity. The background showed a building, perfect for his little investigations.</p><p>Suddenly, George noticed a small object on the ground. He stood on his two legs, reaching out to pick it up. Nearby, a pigeon rested on a ledge. </p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0" coords="1,108.00,621.14,396.00,8.64;1,108.00,632.05,396.35,8.64;1,108.00,642.96,396.00,8.64;1,108.00,653.86,396.00,8.64;1,108.00,664.77,171.01,8.64;1,409.10,571.82,74.04,66.63"><head>Figure 1 :</head><label>1</label><figDesc>Figure 1: The introduced SEED-Story, powered by MLLM, is capable of generating multimodal long stories from user-provided images and texts as the beginning of the story. The generated story consists of rich and coherent narrative texts, along with images that are consistent in characters and style. The story can span up to 25 multimodal sequences (see Appendix), even though we only use a maximum of 10 sequences during training.</figDesc><graphic coords="1,409.10,571.82,74.04,66.63" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1" coords="5,108.00,446.68,396.00,9.03;5,108.00,457.59,397.24,9.03;5,107.64,468.88,396.36,8.64;5,108.00,479.79,396.00,8.64;5,108.00,490.31,396.00,9.03;5,108.00,501.61,396.00,8.64;5,108.00,512.52,138.90,8.64"><head>Figure 2 :</head><label>2</label><figDesc>Figure 2: Overview of the SEED-Story Training Pipeline: In Stage 1, we pre-trains an SD-XL-based de-tokenizer to reconstruct images by taking the features of a pre-trained ViT as inputs. In Stage 2, we sample an interleaved image-text sequence of a random length and train the MLLM by performing next-word prediction and image feature regression between the output hidden states of the learnable queries and ViT features of the target image. In Stage 3, the regressed image features from the MLLM are fed into the de-tokenizer for tuning SD-XL, enhancing the consistency of the characters and styles in the generated images.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2" coords="6,108.00,255.24,395.99,9.03;6,108.00,266.54,396.00,8.64;6,108.00,277.06,397.65,9.03;6,107.69,288.35,397.56,8.64;6,107.64,299.26,396.36,8.64;6,108.00,310.17,396.00,8.64;6,108.00,321.08,396.34,8.64;6,108.00,331.99,385.13,8.64;6,112.25,53.42,205.89,164.64"><head>Figure 3 :</head><label>3</label><figDesc>Figure 3: Left: Visualization of the attention map when predicting the next token for multimodal story generation. We observe that important attentions are aggregated into the first token of the whole sequence ("0" token), punctuation tokens, tokens adjacent to BoI, and tokens adjacent to EoI. Right: The diagram of (a) Dense attention, which preserves all tokens in KV cache. (b) Window attention, which evicts preceding tokens by a sliding window. (c) Attention sink, which preserves the beginning tokens based on window attention. (d) Multimodal attention sink, which preserves the beginning of text tokens, images tokens, and the end of image token based on window attention. It can efficiently enable our model to generalize to generating longer sequences than the training sequence length.</figDesc><graphic coords="6,112.25,53.42,205.89,164.64" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3" coords="7,108.00,530.25,397.75,8.64;7,108.00,541.16,396.00,8.64;7,108.00,552.07,396.17,8.64;7,108.00,562.98,142.07,8.64"><head>… 128 AFigure 4 :</head><label>1284</label><figDesc>Figure 4: Data sample of our StoryStream dataset and existing multimodal story generation datasets. Our multimodal story sequences consist of high-resolution images that are visually engaging, and detailed narrative texts as underlined, closely resembling the real-world storybooks. Additionally, our stories are more extended in length.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4" coords="8,108.00,339.81,396.35,8.64;8,108.00,350.72,239.37,8.64;8,243.96,269.11,55.83,55.83"><head>Figure 5 :</head><label>5</label><figDesc>Figure 5: Story visualization comparison between SEED-Story and baseline models. SEED-Story generates images with higher quality and better consistency.</figDesc><graphic coords="8,243.96,269.11,55.83,55.83" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6" coords="8,108.00,674.86,396.00,8.64;8,108.00,685.38,396.00,9.03;8,108.00,696.68,396.00,8.64;8,108.00,707.58,316.91,8.64;8,108.14,554.29,90.73,108.95"><head>Figure 6 :</head><label>6</label><figDesc>Figure 6: Quantitative evaluation of multimodal story generation between MM-interleaved versus SEED-Story. (a): Histograms displaying FID scores. (b, c, d): GPT-4V is employed to choose a preferred result generated by MM-interleaved and SEED-Story respectively. Pie charts show the win rate, where "Ties" indicates GPT-4V assesses their outcomes with equal scores.</figDesc><graphic coords="8,108.14,554.29,90.73,108.95" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9" coords="9,108.00,653.34,396.00,8.64;9,108.00,664.25,396.00,8.64;9,108.00,675.16,396.00,8.64;9,108.00,686.06,336.61,8.64;9,131.12,559.10,54.64,54.64"><head>Figure 7 :</head><label>7</label><figDesc>Figure 7: Examples of multimodal story generation from SEED-Story. It shows two narrative branches generated from the same initial image. The top branch starts with text referencing "the man in the yellow hat," leading to images that include the character. The bottom branch starts without mentioning the man, resulting in stories that diverge from the first by excluding him.</figDesc><graphic coords="9,131.12,559.10,54.64,54.64" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10" coords="10,172.50,625.83,267.00,8.64;10,125.89,533.06,57.33,57.33"><head>Figure 8 :</head><label>8</label><figDesc>Figure 8: Multimodal long story generation results of SEED-Story.</figDesc><graphic coords="10,125.89,533.06,57.33,57.33" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11" coords="11,172.50,625.94,267.00,8.64;11,123.49,532.33,57.36,57.33"><head>Figure 9 :Figure 10 :</head><label>910</label><figDesc>Figure 9: Multimodal long story generation results of SEED-Story.</figDesc><graphic coords="11,123.49,532.33,57.36,57.33" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_12" coords="18,108.00,400.08,396.00,8.64;18,108.00,410.99,396.00,8.64;18,108.00,421.90,395.99,8.64;18,108.00,432.81,81.88,8.64"><head>Figure 11 :</head><label>11</label><figDesc>Figure 11: Visualization of attention maps from various model runs, showcasing attention patterns across different data lengths, attention heads, and model layers. Notably, the maps highlight consistent focus on '0' tokens, punctuation, tokens adjacent to Begin-of-Image (BoI), and tokens adjacent to End-of-Image (EoI).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_13" coords="22,108.00,667.64,397.74,8.64"><head>a)Figure 12 :</head><label>12</label><figDesc>Figure 12: More story visualization comparison of SEED-Story and other story visualization methods.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_14" coords="23,276.01,171.39,57.46,3.35;23,276.01,176.20,48.64,3.35;23,276.01,181.01,54.49,3.35;23,276.01,185.82,59.33,3.35;23,276.01,190.63,45.94,3.35;23,356.02,173.39,54.13,3.35;23,356.02,178.19,58.81,3.35;23,356.02,183.00,57.94,3.35;23,356.02,187.81,50.70,3.35;23,435.26,172.71,55.91,3.35;23,435.26,177.51,63.35,3.35;23,435.26,182.32,58.80,3.35;23,435.26,187.13,61.27,3.35;23,276.64,262.77,66.46,3.35;23,276.64,267.58,53.12,3.35;23,276.64,272.39,64.69,3.35;23,276.64,277.20,56.08,3.35;23,354.95,263.32,58.92,3.71;23,354.95,268.66,64.01,3.71;23,354.95,274.00,66.10,3.71;23,354.95,279.35,62.13,3.71"><head>Feeling</head><label></label><figDesc>tired from their adventure, George climbed onto the bed, snuggling under the blanket. The room was peaceful, and George was quickly drifting off to sleep. Suddenly, George woke up in the middle of the night, looking around curiously. The room was quiet, and George felt a sense of mystery. George lay back down, resting his head on the pillow. His eyes were wide with curiosity, wondering what new adventures the next day would bring. George followed the man into a colorful hallway. The man was gesturing towards a closed door, and George was curious about what was behind it. George stood in front of a door, ready to push it open and see what was behind it. He was excited about the new discoveries he might find.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_15" coords="23,121.00,353.48,62.92,3.71;23,121.00,358.97,59.51,4.10;23,121.00,364.70,65.26,3.71;23,121.00,370.05,20.35,3.71;23,202.41,262.81,51.57,2.98;23,202.41,267.08,49.27,2.98;23,202.41,271.36,53.12,2.98;23,202.41,275.63,45.80,2.98;23,202.41,279.91,49.24,2.98;23,127.63,470.74,52.60,4.00;23,127.63,476.00,49.21,3.81;23,127.63,481.08,22.34,3.81;23,194.66,400.25,4.68,8.40;23,271.37,400.25,5.54,8.40;23,351.00,400.25,5.37,8.40;23,194.55,490.95,5.67,8.40;23,271.49,490.95,6.08,8.40;23,351.55,490.95,5.04,8.40;23,116.00,490.95,5.43,8.40;23,192.21,581.21,9.35,8.40;23,268.92,581.21,10.22,8.40;23,348.55,581.21,10.05,8.40;23,425.54,581.09,10.27,8.40;23,113.45,581.21,9.53,8.40"><head></head><label></label><figDesc>George found a cream-colored cat with a collar. He gently stroked the cat's head, glad to have found a new friend.George sat on the bed, watching as the man in the yellow suit walked towards a door. He wondered where the man was going, and if their adventure would lead them there.USER: Here is the beginning of a story about George, Please continue it …</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_16" coords="23,180.11,677.79,251.77,8.64;23,123.37,584.03,56.97,56.97"><head>Figure 13 :</head><label>13</label><figDesc>Figure 13: Multimodal story generation results of SEED-Story.</figDesc><graphic coords="23,123.37,584.03,56.97,56.97" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0" coords="3,107.64,222.77,398.10,101.39"><head></head><label></label><figDesc>We further meticulously design evaluation metrics to assess multimodal story generation, taking into account image style consistency, story engagement, and image-text coherence. The evaluation results demonstrate that our model, SEED-Story, achieves superior performance in these aspects.</figDesc><table /><note coords="3,108.00,271.89,396.00,8.64;3,108.00,282.80,396.00,8.64;3,108.00,293.71,396.00,8.64;3,107.64,304.62,396.36,8.64;3,108.00,315.53,397.74,8.64"><p><p><p><p><p>In summary, Our contributions are three-fold.</p><ref type="bibr" coords="3,300.25,271.89,11.85,8.64" target="#b0">(1)</ref> </p>We propose SEED-Story, a novel method that leverages an MLLM to generate multimodal stories with rich narrative text and contextually relevant images.</p><ref type="bibr" coords="3,142.13,293.71,11.74,8.64" target="#b1">(2)</ref> </p>We propose multimodal attention sink to enable the efficient generation of long stories with sequence lengths larger than those used during training. (3) We introduce StoryStream, a large-scale dataset specifically designed for training and benchmarking multimodal story generation.</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1" coords="4,107.69,72.27,396.48,103.56"><head>Table 1 :</head><label>1</label><figDesc>Comparison of multimodal story generation datasets. The table provides details on the number of images, their resolution, the total length of visual stories, and the average text length per sentence, which indicates the narrative detail of the text. Note that StorySalon has various size of images and we choose one of the typical sizes presented here.</figDesc><table coords="4,123.79,122.77,361.93,53.06"><row><cell>Datasets</cell><cell cols="4">Number of Images Resolution Story Length Avg Text Length</cell></row><row><cell>Flintstones [18]</cell><cell>122,560</cell><cell>128 × 128</cell><cell>5</cell><cell>86</cell></row><row><cell>Pororo [25]</cell><cell>73,665</cell><cell>128 × 128</cell><cell>5</cell><cell>74</cell></row><row><cell>StorySalon [27]</cell><cell>159,778</cell><cell>432 × 803</cell><cell>14</cell><cell>106</cell></row><row><cell>StoryStream</cell><cell>257,850</cell><cell>480 × 854</cell><cell>30</cell><cell>146</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2" coords="5,115.47,79.57,381.93,347.34"><head>SEED-Story: Mul&amp;modal Large Language Model (LoRA )</head><label></label><figDesc></figDesc><table coords="5,115.47,79.57,381.93,347.34"><row><cell cols="3">Training sample</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell cols="2">Target</cell></row><row><cell></cell><cell></cell><cell>George, the small</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell></cell><cell></cell><cell>monkey, was on an</cell><cell cols="2">…The man</cell><cell></cell><cell></cell><cell></cell><cell cols="2">They stood together against</cell></row><row><cell></cell><cell></cell><cell>icy adventure…</cell><cell cols="2">comforted George…</cell><cell></cell><cell></cell><cell></cell><cell cols="2">the snowy backdrop…</cell></row><row><cell cols="3">Training pipeline</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell cols="4">Stage1: Visual Tokeniza3on &amp; De-tokeniza3on</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell></cell><cell></cell><cell></cell><cell cols="2">Image features</cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell></cell><cell></cell><cell>ViT Tokenizer</cell><cell>❄</cell><cell cols="3">SDXL Image De-tokenizer</cell><cell>🔥</cell><cell></cell></row><row><cell cols="3">Stage2: Instruc3on Tuning</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell cols="2">Learnable queries</cell></row><row><cell cols="2">George the small</cell><cell></cell><cell>The man comfort</cell><cell></cell><cell></cell><cell cols="2">They stood together</cell><cell></cell></row><row><cell>BOS</cell><cell>298 16 89 …</cell><cell>… BOI</cell><cell>EOI 16 218 82 …</cell><cell>… BOI</cell><cell>EOI</cell><cell cols="2">344 218 82 …</cell><cell>… BOI</cell><cell>EOI</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell>🔥</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell cols="4">344 218 82 898 … BOI</cell><cell>EOI</cell></row><row><cell cols="4">Stage3: De-tokenizer Adapta3on</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell>MLLM outputs</cell></row><row><cell cols="2">MLLM outputs</cell><cell>SDXL Image De-tokenizer 🔥</cell><cell cols="2">Diffusion Loss</cell><cell cols="4">344 218 82 898 … BOI Next-token prediction</cell><cell>Regression Loss</cell></row><row><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell cols="2">Label</cell><cell cols="2">Target Image features</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3" coords="8,345.29,426.71,162.29,61.73"><head>Table 2 :</head><label>2</label><figDesc>Quantitative evaluation for story visualization.</figDesc><table coords="8,351.58,446.36,156.00,42.08"><row><cell>Model</cell><cell cols="2">FID ↓ CLIP Score↑</cell></row><row><cell>LDM</cell><cell>67.29</cell><cell>0.7585</cell></row><row><cell>StoryGen</cell><cell>73.74</cell><cell>0.7573</cell></row><row><cell cols="2">SEED-Story 67.01</cell><cell>0.7793</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4" coords="12,107.69,336.39,396.31,92.65"><head>Table 3 :</head><label>3</label><figDesc></figDesc><table coords="12,116.33,387.29,356.79,41.75"><row><cell>Dense Attn</cell><cell>119.72</cell><cell>0.705</cell><cell>569.67</cell><cell>37.99</cell></row><row><cell>Window Attn</cell><cell>334.90</cell><cell>0.598</cell><cell>450.64</cell><cell>30.81</cell></row><row><cell>Attn Sink</cell><cell>221.53</cell><cell>0.676</cell><cell>451.94</cell><cell>30.81</cell></row><row><cell cols="2">Multimodal Attn Sink 79.67</cell><cell>0.728</cell><cell>473.98</cell><cell>31.82</cell></row></table><note coords="12,142.16,336.39,361.84,8.64;12,108.00,347.30,396.00,8.64;12,108.00,358.21,354.62,8.64;12,116.33,375.98,32.64,8.96;12,223.78,375.98,271.89,8.96"><p><p><p>Quantitative evaluation of long story generation with various attention mechanisms. FID and CLIP scores are calculated by comparing ground truth images with generated images. Inference time and memory usage are calculated by generating 50 sequences multiple times for average.</p>Metrics</p>FID ↓ CLIP Score ↑ Inference Time (s) ↓ Memory (GB) ↓</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5" coords="20,107.69,495.25,397.56,49.02"><head>Table 4 :</head><label>4</label><figDesc>GPT4 score evaluation results in 3 different aspects-style consistency, story engaging level, and text-image coherence.</figDesc><table coords="20,198.49,523.93,212.52,20.33"><row><cell></cell><cell cols="3">Style ↑ Engaging↑ Coherence↑</cell></row><row><cell>SEED-Story</cell><cell>8.61</cell><cell>6.27</cell><cell>8.24</cell></row></table></figure>
+		</body>
+		<back>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Appendix A Implementation Details A.1 Visual Tokenization and De-tokenization</head><p>For visual tokenization, we use Qwen-VL pre-trained ViT-G. We first resize the image to 448x448 images and then use ViT to produce its feature of length256 with 4096 dimension. (shape: <ref type="bibr" coords="17,484.08,154.50,21.17,8.64">[256,</ref><ref type="bibr" coords="17,107.65,165.41,20.54,8.64">4096]</ref>). Inside the MLLM, we use a Q-Former architecture to process the image embedding. It takse the ViT image feature as key and Value, and conduct attention with its learnable queries. The length of learnable queries are 64. For de-tokenization, we also use a Q-Former architecture to transform the MLLM output to the shape of SD-XL condition embedding.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A.2 Instruction Tuning</head><p>Instruction tuning data is formatted as follows: for each story, we sample a random length and compute losses on the last sequence (highlighted in red text). The sequence format is structured as: </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>. [target sequence]&lt;eos&gt;</head><p>For our language model (LLM), we utilize the LLAMA2-7B pre-trained model and finetune it using LoRA, supported by the peft library. The hyperparameter r is set to 6, and lora_alpha is set to 32. The modules optimized include the q_projection_layer, v_projection_layer, k_projection_layer, o_projection_layer, gate_projection_layer, down_projection_layer, and up_projection_layer. We employ a learning rate of 1 × 10 -4 to finetune this model on our dataset across approximately 6 epochs, utilizing 8 NVIDIA-A800 GPUs.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A.3 De-tokenizer Adaptation</head><p>In this stage we fully finetune the SD-XL model. The data format is as the same as instruction tuning, but we fix all MLLM params and optimize only the SD-XL. It takes the MLLM output and is asked to produce image correspond to the ground truth. The SD-XL model was trained using 4 NVIDIA-A800 GPUs. A learning rate of 1 × 10 -4 was chosen to facilitate gradual weight updates, ensuring stable convergence, while a weight decay of 0.03 was applied for regularization to prevent overfitting. Training was performed using mixed precision (bf16), which significantly reduced memory usage and accelerated the training process without compromising the model's accuracy. The model underwent three training epochs, balancing the learning of complex patterns against computational resource use, optimized for large-scale datasets and sophisticated model architectures.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B Attention Map Visualization</head><p>In this section, we present additional visualizations of attention maps. These maps are derived from various model runs, including varying data lengths, attention heads, and layers. The visualizations consistently reveal a pattern of attention focused on '0' tokens, punctuation, tokens adjacent to Begin-of-Image (BoI), and tokens adjacent to End-of-Image (EoI).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C Data Usage and License</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C.1 Curious George</head><p>Curious George is an animated series featuring George, a curious monkey whose adventures teach preschoolers about math, science, and engineering. Guided by The Man with the Yellow Hat, George explores the world through problem-solving and experimentation, making it a delightful and educational experience for young viewers.</p><p>Curious George is released on PBS KIDS <ref type="bibr" coords="17,278.50,702.61,15.86,8.64" target="#b36">[37,</ref><ref type="bibr" coords="17,296.86,702.61,11.89,8.64" target="#b37">38]</ref>, a not-for-profit institution. It is a production of Imagine, WGBH and Universal. Curious George and related characters, created by Margret and H.A.    </p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct coords="13,129.58,93.26,374.42,8.64;13,129.58,104.16,242.74,8.64" xml:id="b0">
+	<monogr>
+		<title level="m" type="main" coords="13,357.01,93.26,146.99,8.64;13,129.58,104.16,75.24,8.64">Jointly training large autoregressive multimodal models</title>
+		<author>
+			<persName coords=""><forename type="first">E</forename><surname>Aiello</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">L</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Nie</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">A</forename><surname>Aghajanyan</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">B</forename><surname>Oguz</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2309.15564</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="13,129.58,123.47,374.42,8.64;13,129.58,134.38,258.61,8.64" xml:id="b1">
+	<monogr>
+		<author>
+			<persName coords=""><forename type="first">C</forename><surname>An</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Gong</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">M</forename><surname>Zhong</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">M</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">L</forename><surname>Kong</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">X</forename><surname>Qiu</surname></persName>
+		</author>
+		<title level="m" coords="13,427.35,123.47,76.65,8.64;13,129.58,134.38,229.56,8.64">L-eval: Instituting standardized evaluation for long context language models</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,129.58,153.69,375.81,8.70;13,129.58,164.60,46.49,8.64" xml:id="b2">
+	<monogr>
+		<ptr target="https://www.animaj.com/#pocoyo/" />
+		<title level="m" coords="13,129.58,153.69,133.71,8.64">Animaj: Animaj official website</title>
+		<imprint>
+			<date type="published" when="2024-05-22">2024. 2024-05-22</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,129.58,183.90,375.46,8.70;13,129.32,194.81,175.84,8.70" xml:id="b3">
+	<monogr>
+		<ptr target="https://www.youtube.com/@RabbidsInvasion" />
+		<title level="m" coords="13,129.58,183.90,212.90,8.64">Animaj: Rabbids invasion official youtube channel</title>
+		<imprint>
+			<date type="published" when="2024-05-22">2024. 2024-05-22</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,129.58,214.12,374.78,8.64;13,129.33,225.03,375.34,8.64" xml:id="b4">
+	<monogr>
+		<title level="m" type="main" coords="13,455.87,214.12,48.49,8.64;13,129.33,225.03,346.96,8.64">Qwen-vl: A versatile vision-language model for understanding, localization, text reading, and beyond</title>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Bai</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Bai</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">P</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">C</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Zhou</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,129.58,244.34,374.78,8.64;13,129.33,255.25,375.34,8.64" xml:id="b5">
+	<monogr>
+		<title level="m" type="main" coords="13,455.87,244.34,48.49,8.64;13,129.33,255.25,346.96,8.64">Qwen-vl: A versatile vision-language model for understanding, localization, text reading, and beyond</title>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Bai</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Bai</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">P</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">C</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Zhou</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,129.58,274.55,374.67,8.64;13,129.58,285.46,135.61,8.64" xml:id="b6">
+	<monogr>
+		<author>
+			<persName coords=""><forename type="first">I</forename><surname>Beltagy</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">M</forename><forename type="middle">E</forename><surname>Peters</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">A</forename><surname>Cohan</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2004.05150</idno>
+		<title level="m" coords="13,287.22,274.55,186.55,8.64">Longformer: The long-document transformer</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="13,129.58,304.77,375.66,8.64;13,129.58,315.68,374.42,8.64;13,129.58,326.59,295.06,8.64" xml:id="b7">
+	<analytic>
+		<title level="a" type="main" coords="13,289.08,315.68,155.34,8.64">Language models are few-shot learners</title>
+		<author>
+			<persName coords=""><forename type="first">T</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">B</forename><surname>Mann</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">N</forename><surname>Ryder</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">M</forename><surname>Subbiah</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><forename type="middle">D</forename><surname>Kaplan</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">P</forename><surname>Dhariwal</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">A</forename><surname>Neelakantan</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">P</forename><surname>Shyam</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">G</forename><surname>Sastry</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">A</forename><surname>Askell</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" coords="13,464.89,315.68,39.11,8.64;13,129.58,326.59,166.82,8.64">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="page" from="1877" to="1901" />
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,129.58,345.90,375.81,8.64;13,129.58,356.80,375.09,8.64" xml:id="b8">
+	<monogr>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">C</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">L</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">E</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Z</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Kwok</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">P</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">H</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<title level="m" coords="13,129.58,356.80,346.58,8.64">Pixart-α: Fast training of diffusion transformer for photorealistic text-to-image synthesis</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,129.58,376.11,375.67,8.64;13,129.58,387.02,374.67,8.64;13,129.58,397.93,135.61,8.64" xml:id="b9">
+	<monogr>
+		<title level="m" type="main" coords="13,284.16,387.02,191.01,8.64">Palm: Scaling language modeling with pathways</title>
+		<author>
+			<persName coords=""><forename type="first">A</forename><surname>Chowdhery</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Narang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Devlin</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">M</forename><surname>Bosma</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">G</forename><surname>Mishra</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">A</forename><surname>Roberts</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">P</forename><surname>Barham</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">H</forename><forename type="middle">W</forename><surname>Chung</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">C</forename><surname>Sutton</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Gehrmann</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2204.02311</idno>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="13,129.58,417.24,375.66,8.64;13,129.58,428.15,374.42,8.64;13,129.58,439.06,101.58,8.64" xml:id="b10">
+	<monogr>
+		<author>
+			<persName coords=""><forename type="first">R</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">C</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Z</forename><surname>Qi</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Z</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">L</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">H</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">H</forename><surname>Wei</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2309.11499</idno>
+		<title level="m" coords="13,174.38,428.15,263.64,8.64">Dreamllm: Synergistic multimodal comprehension and creation</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="13,129.58,458.36,375.66,8.64;13,129.58,469.27,374.42,8.64;13,129.58,480.18,283.93,8.64" xml:id="b11">
+	<monogr>
+		<author>
+			<persName coords=""><forename type="first">A</forename><surname>Dosovitskiy</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">L</forename><surname>Beyer</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">A</forename><surname>Kolesnikov</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">D</forename><surname>Weissenborn</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">X</forename><surname>Zhai</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">T</forename><surname>Unterthiner</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">M</forename><surname>Dehghani</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">M</forename><surname>Minderer</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">G</forename><surname>Heigold</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Gelly</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2010.11929</idno>
+		<title level="m" coords="13,318.63,469.27,185.36,8.64;13,129.58,480.18,117.17,8.64">An image is worth 16x16 words: Transformers for image recognition at scale</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="13,129.58,499.49,374.42,8.64;13,129.58,510.40,287.26,8.64" xml:id="b12">
+	<monogr>
+		<title level="m" type="main" coords="13,341.37,499.49,162.64,8.64;13,129.58,510.40,120.30,8.64">Model tells you what to discard: Adaptive kv cache compression for llms</title>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">L</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">M</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Gao</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.01801</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="13,129.58,529.71,376.16,8.64;13,129.58,540.61,160.54,8.64" xml:id="b13">
+	<monogr>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Z</forename><surname>Zeng</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Shan</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2307.08041</idno>
+		<title level="m" coords="13,308.76,529.71,192.46,8.64">Planting a seed of vision in large language model</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="13,129.58,559.92,374.42,8.64;13,129.58,570.83,86.22,8.64" xml:id="b14">
+	<monogr>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Z</forename><surname>Zeng</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">C</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Shan</surname></persName>
+		</author>
+		<title level="m" coords="13,374.87,559.92,129.13,8.64;13,129.58,570.83,57.17,8.64">Making llama see and draw with seed tokenizer</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,129.58,590.14,374.42,8.64;13,129.58,601.05,303.55,8.64" xml:id="b15">
+	<monogr>
+		<title level="m" type="main" coords="13,425.14,590.14,78.86,8.64;13,129.58,601.05,274.50,8.64">Seed-x: Multimodal models with unified multi-granularity comprehension and generation</title>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">K</forename><surname>Yi</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">L</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">C</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">X</forename><surname>Ding</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Shan</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,129.58,620.35,375.66,8.64;13,129.00,631.26,375.00,8.64;13,129.58,642.17,101.58,8.64" xml:id="b16">
+	<monogr>
+		<title level="m" type="main" coords="13,169.89,631.26,269.88,8.64">Talecrafter: Interactive story visualization with multiple characters</title>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Gong</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Pang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">X</forename><surname>Cun</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">M</forename><surname>Xia</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">H</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">L</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Shan</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Yang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2305.18247</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="13,129.58,661.48,374.42,8.64;13,129.58,672.39,374.42,8.64;13,129.25,683.30,117.05,8.64" xml:id="b17">
+	<analytic>
+		<title level="a" type="main" coords="13,404.83,661.48,99.17,8.64;13,129.58,672.39,94.76,8.64">Imagine this! scripts to compositions to videos</title>
+		<author>
+			<persName coords=""><forename type="first">T</forename><surname>Gupta</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">D</forename><surname>Schwenk</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">A</forename><surname>Farhadi</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">D</forename><surname>Hoiem</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">A</forename><surname>Kembhavi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m" coords="13,249.49,672.39,254.51,8.64;13,129.25,683.30,30.60,8.64">Proceedings of the European conference on computer vision (ECCV)</title>
+		<meeting>the European conference on computer vision (ECCV)</meeting>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="598" to="613" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,129.58,702.61,375.81,8.64;13,129.58,713.51,351.29,8.64" xml:id="b18">
+	<monogr>
+		<author>
+			<persName coords=""><forename type="first">E</forename><forename type="middle">J</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">P</forename><surname>Wallis</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Z</forename><surname>Allen-Zhu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">L</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">W</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2106.09685</idno>
+		<title level="m" coords="13,483.37,702.61,22.01,8.64;13,129.58,713.51,183.80,8.64">Lora: Low-rank adaptation of large language models</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="14,129.58,75.48,375.66,8.64;14,129.22,86.39,374.78,8.64;14,129.58,97.30,374.42,8.64;14,129.58,108.20,144.17,8.64" xml:id="b19">
+	<analytic>
+		<title level="a" type="main" coords="14,252.58,86.39,73.61,8.64">Visual storytelling</title>
+		<author>
+			<persName coords=""><forename type="first">T</forename><forename type="middle">H</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">F</forename><surname>Ferraro</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">N</forename><surname>Mostafazadeh</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">I</forename><surname>Misra</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">A</forename><surname>Agrawal</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Devlin</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">R</forename><surname>Girshick</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">X</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">P</forename><surname>Kohli</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">D</forename><surname>Batra</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m" coords="14,347.12,86.39,156.88,8.64;14,129.58,97.30,374.42,8.64;14,129.58,108.20,48.79,8.64">Proceedings of the 2016 conference of the North American chapter of the association for computational linguistics: Human language technologies</title>
+		<meeting>the 2016 conference of the North American chapter of the association for computational linguistics: Human language technologies</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="1233" to="1239" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,129.58,127.13,374.42,8.64;14,129.58,138.04,374.42,8.70;14,129.25,148.94,26.56,8.64" xml:id="b20">
+	<monogr>
+		<author>
+			<persName coords=""><forename type="first">M</forename><surname>Kilian</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">R</forename><surname>Beaumont</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">D</forename><surname>Mendelevitch</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Kulal</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">A</forename><surname>Blattmann</surname></persName>
+		</author>
+		<ptr target="https://github.com/iejMac/video2dataset" />
+		<title level="m" coords="14,402.70,127.13,101.30,8.64;14,129.58,138.04,164.08,8.64">video2dataset: Easily turn large sets of video urls to a video dataset</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,129.58,167.87,375.66,8.64;14,129.58,178.78,374.42,8.64;14,129.58,189.30,374.42,9.03;14,129.25,200.59,26.56,8.64" xml:id="b21">
+	<analytic>
+		<title level="a" type="main" coords="14,311.24,178.78,192.76,8.64;14,129.58,189.68,136.20,8.64">Obelics: An open web-scale filtered dataset of interleaved image-text documents</title>
+		<author>
+			<persName coords=""><forename type="first">H</forename><surname>Laurençon</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">L</forename><surname>Saulnier</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">L</forename><surname>Tronchon</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Bekman</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">A</forename><surname>Singh</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">A</forename><surname>Lozhkov</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">T</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Karamcheti</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">A</forename><surname>Rush</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">D</forename><surname>Kiela</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j" coords="14,273.51,189.68,217.24,8.64">Advances in Neural Information Processing Systems</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,129.58,219.52,374.42,8.64;14,129.58,230.42,376.07,8.64;14,129.58,241.33,169.59,8.64" xml:id="b22">
+	<analytic>
+		<title level="a" type="main" coords="14,274.94,219.52,229.06,8.64;14,129.58,230.42,195.52,8.64">Blip-2: Bootstrapping language-image pre-training with frozen image encoders and large language models</title>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">D</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Savarese</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Hoi</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m" coords="14,346.07,230.42,159.58,8.64;14,129.58,241.33,140.54,8.64">Proceedings of the International Conference on Machine Learning (ICML)</title>
+		<meeting>the International Conference on Machine Learning (ICML)</meeting>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,129.58,260.26,374.42,8.64;14,129.58,271.17,375.09,8.64" xml:id="b23">
+	<monogr>
+		<title level="m" type="main" coords="14,419.42,260.26,84.58,8.64;14,129.58,271.17,211.71,8.64">Mini-gemini: Mining the potential of multi-modality vision language models</title>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">C</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Z</forename><surname>Zhong</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">R</forename><surname>Chu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Jia</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2403.18814</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="14,129.58,290.09,374.78,8.64;14,129.58,301.00,374.42,8.64;14,129.58,311.91,273.21,8.64" xml:id="b24">
+	<analytic>
+		<title level="a" type="main" coords="14,456.30,290.09,48.06,8.64;14,129.58,301.00,189.12,8.64">Storygan: A sequential conditional gan for story visualization</title>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Z</forename><surname>Gan</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">L</forename><surname>Carin</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">D</forename><surname>Carlson</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Gao</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m" coords="14,338.74,301.00,165.26,8.64;14,129.58,311.91,177.63,8.64">Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition</title>
+		<meeting>the IEEE/CVF Conference on Computer Vision and Pattern Recognition</meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="6329" to="6338" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,129.58,330.83,375.66,8.64;14,129.58,341.74,374.42,8.64;14,129.58,352.65,232.76,8.64" xml:id="b25">
+	<monogr>
+		<author>
+			<persName coords=""><forename type="first">Z</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">C</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">R</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">P</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">L</forename><surname>Qiu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">H</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">H</forename><surname>Qiu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">C</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">W</forename><surname>Shao</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">K</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2311.07575</idno>
+		<title level="m" coords="14,154.50,341.74,349.50,8.64;14,129.58,352.65,65.26,8.64">Sphinx: The joint mixing of weights, tasks, and visual embeddings for multi-modal large language models</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="14,129.58,371.57,374.42,8.64;14,129.33,382.48,271.81,8.64" xml:id="b26">
+	<monogr>
+		<title level="m" type="main" coords="14,313.86,371.57,190.14,8.64;14,129.33,382.48,104.31,8.64">Intelligent grimm-open-ended visual storytelling via latent diffusion models</title>
+		<author>
+			<persName coords=""><forename type="first">C</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">H</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Zhong</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">X</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">W</forename><surname>Xie</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2306.00973</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="14,129.58,401.40,374.67,8.64;14,129.58,412.31,135.61,8.64" xml:id="b27">
+	<monogr>
+		<title level="m" type="main" coords="14,270.38,401.40,203.54,8.64">Improved baselines with visual instruction tuning</title>
+		<author>
+			<persName coords=""><forename type="first">H</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">C</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><forename type="middle">J</forename><surname>Lee</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.03744</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="14,129.58,431.23,374.67,8.64;14,129.58,442.14,135.61,8.64" xml:id="b28">
+	<monogr>
+		<title level="m" type="main" coords="14,270.38,431.23,203.54,8.64">Improved baselines with visual instruction tuning</title>
+		<author>
+			<persName coords=""><forename type="first">H</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">C</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><forename type="middle">J</forename><surname>Lee</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2310.03744</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="14,129.58,461.06,374.42,8.64;14,129.25,471.97,26.56,8.64" xml:id="b29">
+	<monogr>
+		<author>
+			<persName coords=""><forename type="first">H</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">C</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Q</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><forename type="middle">J</forename><surname>Lee</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2304.08485</idno>
+		<title level="m" coords="14,266.42,461.06,98.07,8.64">Visual instruction tuning</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="14,129.58,490.89,374.42,8.64;14,129.58,501.80,238.85,8.64" xml:id="b30">
+	<monogr>
+		<author>
+			<persName coords=""><forename type="first">A</forename><surname>Maharana</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">M</forename><surname>Bansal</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2110.10834</idno>
+		<title level="m" coords="14,238.04,490.89,265.96,8.64;14,129.58,501.80,72.01,8.64">Integrating visuospatial, linguistic and commonsense structure into story visualization</title>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="14,129.58,520.72,374.42,8.64;14,129.33,531.63,263.78,8.64" xml:id="b31">
+	<monogr>
+		<title level="m" type="main" coords="14,290.09,520.72,213.91,8.64;14,129.33,531.63,96.74,8.64">Improving generation and evaluation of visual stories via semantic consistency</title>
+		<author>
+			<persName coords=""><forename type="first">A</forename><surname>Maharana</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">D</forename><surname>Hannan</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">M</forename><surname>Bansal</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2105.10026</idno>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="14,129.58,550.55,376.07,8.64;14,129.58,561.46,376.16,8.64;14,129.58,572.37,63.36,8.64" xml:id="b32">
+	<analytic>
+		<title level="a" type="main" coords="14,291.22,550.55,214.43,8.64;14,129.58,561.46,123.86,8.64">Storydall-e: Adapting pretrained text-to-image transformers for story continuation</title>
+		<author>
+			<persName coords=""><forename type="first">A</forename><surname>Maharana</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">D</forename><surname>Hannan</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">M</forename><surname>Bansal</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m" coords="14,277.78,561.46,175.94,8.64">European Conference on Computer Vision</title>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="70" to="87" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,129.58,591.29,375.46,8.70;14,129.58,602.20,65.65,8.70" xml:id="b33">
+	<monogr>
+		<ptr target="https://www.openai.com/chatgpt" />
+		<title level="m" coords="14,129.58,591.29,247.50,8.64">OpenAI: Gpt-4v: Optimizing language models for dialogue</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,129.58,621.13,374.42,8.64;14,129.58,632.03,374.42,8.64;14,129.58,642.94,172.91,8.64" xml:id="b34">
+	<analytic>
+		<title level="a" type="main" coords="14,306.28,621.13,197.72,8.64;14,129.58,632.03,89.47,8.64">Synthesizing coherent story with auto-regressive latent diffusion models</title>
+		<author>
+			<persName coords=""><forename type="first">X</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">P</forename><surname>Qin</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">H</forename><surname>Xue</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">W</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m" coords="14,240.13,632.03,263.87,8.64;14,129.58,642.94,77.53,8.64">Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision</title>
+		<meeting>the IEEE/CVF Winter Conference on Applications of Computer Vision</meeting>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+			<biblScope unit="page" from="2920" to="2930" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,129.58,661.87,374.42,8.64;14,129.58,672.77,374.42,8.64;14,129.58,683.68,242.08,8.64" xml:id="b35">
+	<analytic>
+		<title level="a" type="main" coords="14,414.44,661.87,89.57,8.64;14,129.58,672.77,131.44,8.64">Styleclip: Text-driven manipulation of stylegan imagery</title>
+		<author>
+			<persName coords=""><forename type="first">O</forename><surname>Patashnik</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Z</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">E</forename><surname>Shechtman</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">D</forename><surname>Cohen-Or</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">D</forename><surname>Lischinski</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m" coords="14,281.99,672.77,222.00,8.64;14,129.58,683.68,111.48,8.64">Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)</title>
+		<meeting>the IEEE/CVF International Conference on Computer Vision (ICCV)</meeting>
+		<imprint>
+			<date type="published" when="2021-10">October 2021</date>
+			<biblScope unit="page" from="2085" to="2094" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,129.58,702.61,50.32,8.64;14,198.49,702.61,306.56,8.70;14,129.58,713.51,165.38,8.70" xml:id="b36">
+	<monogr>
+		<ptr target="https://pbskids.org/curiousgeorge/" />
+		<title level="m" coords="14,129.58,702.61,50.32,8.64;14,198.49,702.61,149.94,8.64">PBS Kids: Curious george official website</title>
+		<imprint>
+			<date type="published" when="2024-05-22">2024. 2024-05-22</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="15,129.58,75.48,375.46,8.70;15,129.32,86.39,165.38,8.70" xml:id="b37">
+	<monogr>
+		<ptr target="https://www.youtube.com/@CuriousGeorge" />
+		<title level="m" coords="15,129.58,75.48,213.61,8.64">PBS Kids: Curious george official youtube channel</title>
+		<imprint>
+			<date type="published" when="2024-05-22">2024. 2024-05-22</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="15,129.58,106.68,374.42,8.64;15,129.58,117.59,353.96,8.64" xml:id="b38">
+	<monogr>
+		<author>
+			<persName coords=""><forename type="first">Z</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">W</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">L</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Hao</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">F</forename><surname>Wei</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2306.14824</idno>
+		<title level="m" coords="15,411.58,106.68,92.42,8.64;15,129.58,117.59,186.66,8.64">Kosmos-2: Grounding multimodal large language models to the world</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="15,129.58,137.89,374.42,8.64;15,129.58,148.79,353.96,8.64" xml:id="b39">
+	<monogr>
+		<author>
+			<persName coords=""><forename type="first">Z</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">W</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">L</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Hao</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">F</forename><surname>Wei</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2306.14824</idno>
+		<title level="m" coords="15,411.58,137.89,92.42,8.64;15,129.58,148.79,186.66,8.64">Kosmos-2: Grounding multimodal large language models to the world</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="15,129.58,169.09,375.66,8.64;15,129.58,180.00,374.42,8.64;15,129.58,190.91,101.58,8.64" xml:id="b40">
+	<monogr>
+		<title level="m" type="main" coords="15,144.40,180.00,297.65,8.64">Sdxl: Improving latent diffusion models for high-resolution image synthesis</title>
+		<author>
+			<persName coords=""><forename type="first">D</forename><surname>Podell</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Z</forename><surname>English</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">K</forename><surname>Lacey</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">A</forename><surname>Blattmann</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">T</forename><surname>Dockhorn</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Müller</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Penna</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">R</forename><surname>Rombach</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2307.01952</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="15,129.58,211.20,374.42,8.64;15,129.58,222.11,374.42,8.64;15,129.58,233.02,273.21,8.64" xml:id="b41">
+	<analytic>
+		<title level="a" type="main" coords="15,416.49,211.20,87.51,8.64;15,129.58,222.11,187.64,8.64">Make-a-story: Visual memory conditioned consistent story generation</title>
+		<author>
+			<persName coords=""><forename type="first">T</forename><surname>Rahman</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">H</forename><forename type="middle">Y</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Tulyakov</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Mahajan</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">L</forename><surname>Sigal</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m" coords="15,337.71,222.11,166.29,8.64;15,129.58,233.02,177.63,8.64">Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition</title>
+		<meeting>the IEEE/CVF Conference on Computer Vision and Pattern Recognition</meeting>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page" from="2493" to="2502" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="15,129.58,253.32,374.42,8.64;15,129.22,264.22,374.78,8.64;15,129.58,275.13,196.18,8.64" xml:id="b42">
+	<analytic>
+		<title level="a" type="main" coords="15,377.90,253.32,126.10,8.64;15,129.22,264.22,109.21,8.64">High-resolution image synthesis with latent diffusion models</title>
+		<author>
+			<persName coords=""><forename type="first">R</forename><surname>Rombach</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">A</forename><surname>Blattmann</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">D</forename><surname>Lorenz</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">P</forename><surname>Esser</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">B</forename><surname>Ommer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m" coords="15,259.44,264.22,244.56,8.64;15,129.58,275.13,90.91,8.64">Proceedings of the IEEE/CVF conference on computer vision and pattern recognition</title>
+		<meeting>the IEEE/CVF conference on computer vision and pattern recognition</meeting>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="10684" to="10695" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="15,129.58,295.43,374.42,8.64;15,129.25,306.34,26.56,8.64" xml:id="b43">
+	<monogr>
+		<author>
+			<persName coords=""><forename type="first">X</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">M</forename><surname>Elhoseiny</surname></persName>
+		</author>
+		<title level="m" coords="15,234.31,295.43,269.70,8.64">Storygpt-v: Large language models as consistent story visualizers</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="15,129.58,326.63,375.66,8.64;15,129.11,337.54,287.00,8.64" xml:id="b44">
+	<monogr>
+		<title level="m" type="main" coords="15,172.63,337.54,214.44,8.64">Generative multimodal models are in-context learners</title>
+		<author>
+			<persName coords=""><forename type="first">Q</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Cui</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">X</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">F</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Q</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Z</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Rao</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">T</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="15,129.58,357.84,375.80,8.64;15,129.58,368.75,323.59,8.64" xml:id="b45">
+	<monogr>
+		<author>
+			<persName coords=""><forename type="first">Q</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Q</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Cui</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">F</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">X</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">H</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">T</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2307.05222</idno>
+		<title level="m" coords="15,129.58,368.75,156.39,8.64">Generative pretraining in multimodality</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="15,129.58,389.04,375.80,8.64;15,129.58,399.95,187.76,8.64" xml:id="b46">
+	<monogr>
+		<author>
+			<persName coords=""><forename type="first">Q</forename><surname>Sun</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Q</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Cui</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">F</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">X</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">H</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">T</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<title level="m" coords="15,129.58,399.95,158.71,8.64">Generative pretraining in multimodality</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="15,129.58,420.25,375.81,8.64;15,129.58,431.15,375.46,8.70;15,129.58,442.06,107.49,8.70" xml:id="b47">
+	<monogr>
+		<author>
+			<persName coords=""><forename type="first">R</forename><surname>Taori</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">I</forename><surname>Gulrajani</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">T</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Dubois</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">C</forename><surname>Guestrin</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">P</forename><surname>Liang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">T</forename><forename type="middle">B</forename><surname>Hashimoto</surname></persName>
+		</author>
+		<ptr target="https://github.com/tatsu-lab/stanford_alpaca" />
+		<title level="m" coords="15,129.58,431.15,216.29,8.64">Stanford alpaca: An instruction-following llama model</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="15,129.58,462.36,375.92,8.64;15,129.58,473.27,48.98,8.64" xml:id="b48">
+	<monogr>
+		<title level="m" type="main" coords="15,171.14,462.36,228.32,8.64">Chameleon: Mixed-modal early-fusion foundation models</title>
+		<author>
+			<persName coords=""><forename type="first">C</forename><surname>Team</surname></persName>
+		</author>
+		<idno>arXiv- 2405</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv e-prints</note>
+</biblStruct>
+
+<biblStruct coords="15,129.58,493.56,88.27,8.64;15,233.53,493.56,271.51,8.70;15,129.58,504.47,201.98,8.70" xml:id="b49">
+	<monogr>
+		<ptr target="https://thelandbeforetime.org" />
+		<title level="m" coords="15,129.58,493.56,88.27,8.64;15,233.53,493.56,180.88,8.64">TheLandBeforeTime: The land before time official website</title>
+		<imprint>
+			<date type="published" when="2024-05-22">2024. 2024-05-22</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="15,129.58,524.77,378.08,8.70;15,129.58,535.68,249.05,8.70" xml:id="b50">
+	<monogr>
+		<ptr target="https://www.youtube.com/@TheLandBeforeTime" />
+		<title level="m" coords="15,129.58,524.77,279.79,8.64">TheLandBeforeTime: The land before time official youtube channel</title>
+		<imprint>
+			<date type="published" when="2024-05-22">2024. 2024-05-22</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="15,129.58,555.97,375.66,8.64;15,129.39,566.88,374.61,8.64;15,129.58,577.79,216.43,8.64" xml:id="b51">
+	<monogr>
+		<title level="m" type="main" coords="15,165.87,566.88,338.14,8.64;15,129.58,577.79,49.29,8.64">Mm-interleaved: Interleaved image-text generative modeling via multi-modal feature synchronizer</title>
+		<author>
+			<persName coords=""><forename type="first">C</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">X</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Xiong</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">W</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Z</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">W</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">L</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">T</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Zhou</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2401.10208</idno>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="15,129.58,598.08,375.66,8.64;15,129.58,608.99,376.16,8.64;15,129.58,619.90,160.54,8.64" xml:id="b52">
+	<monogr>
+		<author>
+			<persName coords=""><forename type="first">H</forename><surname>Touvron</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">T</forename><surname>Lavril</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">G</forename><surname>Izacard</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">X</forename><surname>Martinet</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">M</forename><forename type="middle">A</forename><surname>Lachaux</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">T</forename><surname>Lacroix</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">B</forename><surname>Rozière</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">N</forename><surname>Goyal</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">E</forename><surname>Hambro</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">F</forename><surname>Azhar</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2302.13971</idno>
+		<title level="m" coords="15,287.74,608.99,213.63,8.64">Llama: Open and efficient foundation language models</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="15,129.58,640.20,374.42,8.64;15,129.58,651.11,167.70,8.64" xml:id="b53">
+	<monogr>
+		<title level="m" type="main" coords="15,303.82,640.20,200.18,8.64;15,129.58,651.11,138.65,8.64">Not all steps are created equal: Selective diffusion distillation for image manipulation</title>
+		<author>
+			<persName coords=""><forename type="first">L</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Cong Chen</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="15,129.58,671.40,374.42,8.64;15,129.58,682.31,101.58,8.64" xml:id="b54">
+	<monogr>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">H</forename><surname>Fei</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">L</forename><surname>Qu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">W</forename><surname>Ji</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">T</forename><forename type="middle">S</forename><surname>Chua</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2309.05519</idno>
+		<title level="m" coords="15,296.08,671.40,146.40,8.64">Next-gpt: Any-to-any multimodal llm</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="15,129.58,702.61,374.42,8.64;15,129.58,713.51,223.36,8.64" xml:id="b55">
+	<monogr>
+		<title level="m" type="main" coords="15,333.76,702.61,170.24,8.64;15,129.58,713.51,56.50,8.64">Efficient streaming language models with attention sinks</title>
+		<author>
+			<persName coords=""><forename type="first">G</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">B</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">M</forename><surname>Lewis</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2309.17453</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="16,129.58,75.48,375.67,8.64;16,129.58,86.39,374.42,8.64;16,129.58,97.30,190.98,8.64" xml:id="b56">
+	<monogr>
+		<title level="m" type="main" coords="16,219.45,86.39,284.55,8.64;16,129.58,97.30,23.96,8.64">Scaling autoregressive multi-modal models: Pretraining and instruction tuning</title>
+		<author>
+			<persName coords=""><forename type="first">L</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">B</forename><surname>Shi</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">R</forename><surname>Pasunuru</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">B</forename><surname>Muller</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">O</forename><surname>Golovneva</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">T</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">A</forename><surname>Babu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">B</forename><surname>Tang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">B</forename><surname>Karrer</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Sheynin</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2309.02591</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="16,129.58,116.17,375.66,8.64;16,129.58,127.08,374.42,8.64;16,129.58,137.99,339.97,8.64" xml:id="b57">
+	<monogr>
+		<author>
+			<persName coords=""><forename type="first">P</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">X</forename><surname>Dong</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">B</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">C</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">L</forename><surname>Ouyang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Z</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Ding</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">H</forename><surname>Duan</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">H</forename><surname>Yan</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2309.15112</idno>
+		<title level="m" coords="16,234.02,127.08,269.98,8.64;16,129.58,137.99,172.63,8.64">Internlm-xcomposer: A vision-language large model for advanced text-image comprehension and composition</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="16,129.58,156.87,375.66,8.64;16,129.22,167.78,374.78,8.64;16,129.58,178.69,82.44,8.64" xml:id="b58">
+	<monogr>
+		<author>
+			<persName coords=""><forename type="first">L</forename><surname>Zheng</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">W</forename><forename type="middle">L</forename><surname>Chiang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Sheng</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Zhuang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Z</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Zhuang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Z</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">D</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">E</forename><forename type="middle">P</forename><surname>Xing</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">H</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><forename type="middle">E</forename><surname>Gonzalez</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">I</forename><surname>Stoica</surname></persName>
+		</author>
+		<title level="m" coords="16,330.33,167.78,173.67,8.64;16,129.58,178.69,53.39,8.64">Judging llm-as-a-judge with mt-bench and chatbot arena</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="16,129.58,197.57,374.42,8.64;16,129.58,208.48,373.99,8.64" xml:id="b59">
+	<monogr>
+		<title level="m" type="main" coords="16,344.07,197.57,159.94,8.64;16,129.58,208.48,206.49,8.64">Minigpt-4: Enhancing vision-language understanding with advanced large language models</title>
+		<author>
+			<persName coords=""><forename type="first">D</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">X</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">M</forename><surname>Elhoseiny</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2304.10592</idno>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="16,129.58,227.36,374.42,8.64;16,129.58,238.27,374.42,8.64;16,129.58,249.18,101.58,8.64" xml:id="b60">
+	<monogr>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Zhu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">X</forename><surname>Ding</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">H</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Shan</surname></persName>
+		</author>
+		<idno type="arXiv">arXiv:2312.09251</idno>
+		<title level="m" coords="16,421.49,227.36,82.51,8.64;16,129.58,238.27,310.80,8.64">Vl-gpt: A generative pre-trained transformer for vision and language understanding and generation</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>
